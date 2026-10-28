@@ -1,495 +1,495 @@
 {
- "week": "2026-W45",
- "default_time": "19:30",
- "posts": [
-  {
-   "id": "2026-11-02-paratha-reel",
-   "date": "2026-11-02",
-   "type": "reel",
-   "pillar": "hero",
-   "title": "The paratha that slides",
-   "scenes": [
+  "week": "2026-W45",
+  "default_time": "19:30",
+  "posts": [
     {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195352_85811876-57f3-41aa-9073-dcb4fd6c6b41.mp4",
-     "kicker": "Subah ka paratha",
-     "text": "Flip it once."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195351_cfd7ccf0-04c8-4bb3-b495-17382dd5945c.mp4",
-     "text": "It just *slides.*",
-     "sub": "Nothing sticks. Nothing left behind."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195351_52236e2b-31c6-468e-b730-c630018dcd29.mp4",
-     "text": "Nashta, *sorted.*",
-     "position": "upper"
-    }
-   ],
-   "end_card": {
-    "headline": "Iron, *made light.*",
-    "sub": "Non-stick tawa for every desi kitchen."
-   },
-   "cover": {
-    "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195121_dc36c82d-9c4a-4a08-ab4b-80995ea8262a.png",
-    "kicker": "Morning ritual",
-    "headline": "The paratha\nthat *slides.*"
-   },
-   "caption": "Subah ka paratha, without the struggle.\n\nFlip once. Tilt the tawa. It slides right off, no scraping, no burnt bits left behind.\n\nTawaana's granite non-stick coating sits on a super lightweight iron body, so you get even heat and zero sticking, every single morning.\n\nYour nashta deserves a better tawa. tawaana.com",
-   "hashtags": [
-    "#Tawaana",
-    "#Paratha",
-    "#NonStickTawa",
-    "#DesiBreakfast",
-    "#PakistaniFood",
-    "#KitchenEssentials",
-    "#Nashta"
-   ]
-  },
-  {
-   "id": "2026-11-03-iron-made-light",
-   "date": "2026-11-03",
-   "type": "carousel",
-   "pillar": "why-tawaana",
-   "title": "Iron, made light",
-   "slides": [
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194834_d91f9f6a-7a2a-4831-912b-efcea6afacf8.png",
-     "layout": "cover",
-     "kicker": "Why Tawaana",
-     "headline": "Iron, *made light.*",
-     "body": "The strength of iron. The ease of non-stick. Swipe to see why."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194833_bf6f99cf-58eb-49eb-b3fe-e33ecc2bef04.png",
-     "layout": "text",
-     "number": "01",
-     "kicker": "Raw iron tawa",
-     "headline": "Strong, but heavy.",
-     "body": "It needs oiling, seasoning and care, and it rusts the day you forget."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194833_c75fc44e-d649-42dc-a077-a961db5e3c1b.png",
-     "layout": "text",
-     "number": "02",
-     "kicker": "Ordinary non-stick",
-     "headline": "Easy, but flimsy.",
-     "body": "Thin bodies heat unevenly, warp on a high flame and start peeling within months."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194833_26f8ad5d-5866-49c4-ac6e-002cbacfb7bb.png",
-     "layout": "text",
-     "number": "03",
-     "kicker": "Tawaana",
-     "headline": "Light iron. *Real non-stick.*",
-     "body": "A super lightweight iron body with a PFOA-free granite coating. Easy on the wrist, steady on the heat."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194834_d91f9f6a-7a2a-4831-912b-efcea6afacf8.png",
-     "layout": "table",
-     "kicker": "Side by side",
-     "headline": "The best of *both.*",
-     "table": {
-      "cols": [
-       "",
-       "Tawaana",
-       "Raw iron",
-       "Ordinary"
+      "id": "2026-10-29-egg-slide-reel",
+      "date": "2026-10-29",
+      "type": "reel",
+      "pillar": "product-in-action",
+      "title": "Anda jo slide kare",
+      "scenes": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195352_0f80961c-28e7-45ab-a427-c4aacad029be.mp4",
+          "kicker": "Anda jo slide kare",
+          "text": "A few drops of oil."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195352_0bb3d841-a280-460b-8863-cd8b874e0e3c.mp4",
+          "text": "And it *slides* right out."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195352_dc4e0985-82e9-4386-af84-b3eaaed58d3c.mp4",
+          "text": "No scraping.\nNo stuck bits.",
+          "position": "upper"
+        }
       ],
-      "rows": [
-       [
-        "Light and easy to handle",
-        "yes",
-        "no",
-        "yes"
-       ],
-       [
-        "Even, steady heat",
-        "yes",
-        "yes",
-        "no"
-       ],
-       [
-        "Food doesn't stick",
-        "yes",
-        "After seasoning",
-        "yes"
-       ],
-       [
-        "No seasoning needed",
-        "yes",
-        "no",
-        "yes"
-       ],
-       [
-        "Won't rust",
-        "yes",
-        "no",
-        "yes"
-       ],
-       [
-        "Won't warp on high flame",
-        "yes",
-        "yes",
-        "no"
-       ],
-       [
-        "1-year replacement",
-        "yes",
-        "no",
-        "no"
-       ]
+      "end_card": {
+        "headline": "Iron, *made light.*",
+        "sub": "Non-stick fry pan, 20cm to 30cm."
+      },
+      "cover": {
+        "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194834_cc04d15f-a111-4552-9174-3e476801a62e.png",
+        "kicker": "The breakfast test",
+        "headline": "Anda jo\n*slide kare.*"
+      },
+      "caption": "The fried egg test. Every non-stick claims it. Watch this one pass.\n\nA few drops of oil, a medium flame, and the egg slides straight out. Crisp edges, runny yolk, nothing stuck to the pan.\n\nTawaana fry pans come in 20cm to 30cm, with a wooden handle that stays comfortable to hold.\n\nAnda, omelette, shami kebab, all sorted. tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#FryPan",
+        "#NonStickPan",
+        "#AndaParatha",
+        "#DesiBreakfast",
+        "#PakistaniKitchen",
+        "#CookingReels"
       ]
-     }
     },
     {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194833_26f8ad5d-5866-49c4-ac6e-002cbacfb7bb.png",
-     "layout": "closing",
-     "headline": "Har ghar ki *zaroorat.*",
-     "body": "Tawa, fry pan, hot plate and karahi. Built for desi cooking."
+      "id": "2026-10-30-care-guide",
+      "date": "2026-10-30",
+      "type": "carousel",
+      "pillar": "care",
+      "title": "4 habits that make your tawa last",
+      "slides": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195121_a819ce25-b139-4444-9716-c5c805a14a15.png",
+          "layout": "cover",
+          "kicker": "Care guide",
+          "headline": "4 habits that make\nyour tawa *last.*",
+          "body": "Ten seconds a day. Swipe."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195120_42bb235c-4c9b-48af-aa1d-e6153cc30e81.png",
+          "layout": "text",
+          "number": "01",
+          "kicker": "Wood or silicone only",
+          "headline": "Keep metal off the surface.",
+          "body": "Use wooden or silicone spatulas. No knives, forks or steel spoons, and don't cut food in the pan."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195311_9e2571d3-bb40-4de3-8a02-870c477fb97d.png",
+          "layout": "text",
+          "number": "02",
+          "kicker": "Low to medium flame",
+          "headline": "Gentle heat does the work.",
+          "body": "Preheat for 1 to 2 minutes on low-to-medium. Don't leave it empty on a high flame."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195728_de28c4cb-b9a5-4392-8a3e-7bf25ea64825.png",
+          "layout": "text",
+          "number": "03",
+          "kicker": "Cool, then wash",
+          "headline": "Soft sponge, warm soapy water.",
+          "body": "Let it cool first, cold water on a hot pan shocks the iron. No steel wool or scourers."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195728_a24404fb-0e73-4850-8220-a47c729e7d56.png",
+          "layout": "text",
+          "number": "04",
+          "kicker": "Dry and hang",
+          "headline": "Dry fully. Hang by the loop.",
+          "body": "Water left on the surface leaves marks. Hang it, or stack with a cloth in between."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195121_a819ce25-b139-4444-9716-c5c805a14a15.png",
+          "layout": "closing",
+          "headline": "Look after it, and\nit *looks after you.*",
+          "body": "Every piece is backed by a 1-year replacement warranty."
+        }
+      ],
+      "caption": "Want your tawa to look new for years? Four small habits.\n\n1. Wooden or silicone spatulas only\n2. Low-to-medium flame, 1 to 2 minute preheat\n3. Let it cool, then wash with a soft sponge\n4. Dry it fully and hang it by the loop\n\nDo this, and your 1-year replacement warranty has your back too.\n\nSave this for later. Full care guide at tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#KitchenTips",
+        "#CookwareCare",
+        "#NonStickTawa",
+        "#DesiKitchen",
+        "#KitchenHacks"
+      ]
+    },
+    {
+      "id": "2026-10-31-easy-on-the-wrist",
+      "date": "2026-10-31",
+      "type": "image",
+      "pillar": "lifestyle",
+      "title": "Easy on the wrist",
+      "slides": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195311_2e06cc60-7ed9-4e0c-8407-45c97cc37029.png",
+          "layout": "cover",
+          "kicker": "Super lightweight iron",
+          "headline": "Easy on the wrist,\n*every single morning.*",
+          "body": "Lift, flip and serve with one hand.",
+          "size": 78
+        }
+      ],
+      "alt_text": "A hand with mehndi holding a Tawaana tawa with a fresh roti, by its wooden handle.",
+      "caption": "If you've ever lifted a raw iron tawa, you know the feeling.\n\nTawaana is iron, made light. A super lightweight body, a comfortable wooden handle, and the even heat iron is known for.\n\nLift it, flip it, carry it to the table with one hand.\n\nBuilt for the person who makes roti every day. tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#NonStickTawa",
+        "#DesiKitchen",
+        "#RotiTime",
+        "#KitchenEssentials",
+        "#PakistaniHome"
+      ]
+    },
+    {
+      "id": "2026-11-01-sunday-karahi-reel",
+      "date": "2026-11-01",
+      "type": "reel",
+      "pillar": "family",
+      "title": "Sunday ki karahi",
+      "scenes": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195731_82c1edfb-c765-4fef-abba-bec9003fea72.mp4",
+          "kicker": "Sunday ki karahi",
+          "text": "Slow simmer.\nLid on."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195353_9c713e58-0e8e-40ed-8540-43aeed3e2b83.mp4",
+          "text": "Steam, spice,\n*done.*"
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195352_e535755a-ba5b-4c50-883d-f1c01d2e2e5e.mp4",
+          "text": "Sab ke *liye.*",
+          "position": "upper"
+        }
+      ],
+      "end_card": {
+        "headline": "Iron, *made light.*",
+        "sub": "Non-stick karahi with glass lid."
+      },
+      "cover": {
+        "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195121_b25f4121-f666-4171-b4c1-8636da16ea14.png",
+        "kicker": "Weekend special",
+        "headline": "Sunday ki\n*karahi.*"
+      },
+      "caption": "Sunday ki karahi hits different.\n\nMasala bubbling under the glass lid, so you can keep an eye on it without letting the steam out. Even heat all the way round, so nothing catches at the bottom.\n\nTawaana's non-stick karahi: super lightweight iron, PFOA-free granite coating, and a glass lid.\n\nWho's cooking in your house this Sunday? tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#ChickenKarahi",
+        "#SundayKarahi",
+        "#PakistaniFood",
+        "#DesiKitchen",
+        "#FamilyDinner",
+        "#NonStickKarahi"
+      ]
+    },
+    {
+      "id": "2026-11-02-paratha-reel",
+      "date": "2026-11-02",
+      "type": "reel",
+      "pillar": "hero",
+      "title": "The paratha that slides",
+      "scenes": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195352_85811876-57f3-41aa-9073-dcb4fd6c6b41.mp4",
+          "kicker": "Subah ka paratha",
+          "text": "Flip it once."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195351_cfd7ccf0-04c8-4bb3-b495-17382dd5945c.mp4",
+          "text": "It just *slides.*",
+          "sub": "Nothing sticks. Nothing left behind."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195351_52236e2b-31c6-468e-b730-c630018dcd29.mp4",
+          "text": "Nashta, *sorted.*",
+          "position": "upper"
+        }
+      ],
+      "end_card": {
+        "headline": "Iron, *made light.*",
+        "sub": "Non-stick tawa for every desi kitchen."
+      },
+      "cover": {
+        "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195121_dc36c82d-9c4a-4a08-ab4b-80995ea8262a.png",
+        "kicker": "Morning ritual",
+        "headline": "The paratha\nthat *slides.*"
+      },
+      "caption": "Subah ka paratha, without the struggle.\n\nFlip once. Tilt the tawa. It slides right off, no scraping, no burnt bits left behind.\n\nTawaana's granite non-stick coating sits on a super lightweight iron body, so you get even heat and zero sticking, every single morning.\n\nYour nashta deserves a better tawa. tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#Paratha",
+        "#NonStickTawa",
+        "#DesiBreakfast",
+        "#PakistaniFood",
+        "#KitchenEssentials",
+        "#Nashta"
+      ]
+    },
+    {
+      "id": "2026-11-03-iron-made-light",
+      "date": "2026-11-03",
+      "type": "carousel",
+      "pillar": "why-tawaana",
+      "title": "Iron, made light",
+      "slides": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194834_d91f9f6a-7a2a-4831-912b-efcea6afacf8.png",
+          "layout": "cover",
+          "kicker": "Why Tawaana",
+          "headline": "Iron, *made light.*",
+          "body": "The strength of iron. The ease of non-stick. Swipe to see why."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194833_bf6f99cf-58eb-49eb-b3fe-e33ecc2bef04.png",
+          "layout": "text",
+          "number": "01",
+          "kicker": "Raw iron tawa",
+          "headline": "Strong, but heavy.",
+          "body": "It needs oiling, seasoning and care, and it rusts the day you forget."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194833_c75fc44e-d649-42dc-a077-a961db5e3c1b.png",
+          "layout": "text",
+          "number": "02",
+          "kicker": "Ordinary non-stick",
+          "headline": "Easy, but flimsy.",
+          "body": "Thin bodies heat unevenly, warp on a high flame and start peeling within months."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194833_26f8ad5d-5866-49c4-ac6e-002cbacfb7bb.png",
+          "layout": "text",
+          "number": "03",
+          "kicker": "Tawaana",
+          "headline": "Light iron. *Real non-stick.*",
+          "body": "A super lightweight iron body with a PFOA-free granite coating. Easy on the wrist, steady on the heat."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194834_d91f9f6a-7a2a-4831-912b-efcea6afacf8.png",
+          "layout": "table",
+          "kicker": "Side by side",
+          "headline": "The best of *both.*",
+          "table": {
+            "cols": [
+              "",
+              "Tawaana",
+              "Raw iron",
+              "Ordinary"
+            ],
+            "rows": [
+              [
+                "Light and easy to handle",
+                "yes",
+                "no",
+                "yes"
+              ],
+              [
+                "Even, steady heat",
+                "yes",
+                "yes",
+                "no"
+              ],
+              [
+                "Food doesn't stick",
+                "yes",
+                "After seasoning",
+                "yes"
+              ],
+              [
+                "No seasoning needed",
+                "yes",
+                "no",
+                "yes"
+              ],
+              [
+                "Won't rust",
+                "yes",
+                "no",
+                "yes"
+              ],
+              [
+                "Won't warp on high flame",
+                "yes",
+                "yes",
+                "no"
+              ],
+              [
+                "1-year replacement",
+                "yes",
+                "no",
+                "no"
+              ]
+            ]
+          }
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194833_26f8ad5d-5866-49c4-ac6e-002cbacfb7bb.png",
+          "layout": "closing",
+          "headline": "Har ghar ki *zaroorat.*",
+          "body": "Tawa, fry pan, hot plate and karahi. Built for desi cooking."
+        }
+      ],
+      "caption": "Raw iron or non-stick? You don't have to pick anymore.\n\nRaw iron is strong but heavy, and it rusts if you skip the seasoning. Ordinary non-stick is easy, until it warps and peels.\n\nTawaana puts a PFOA-free granite non-stick coating on a super lightweight iron body. Even heat, nothing sticks, no seasoning, no rust.\n\nSwipe for the side-by-side. tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#NonStickTawa",
+        "#IronTawa",
+        "#DesiKitchen",
+        "#PakistaniKitchen",
+        "#KitchenEssentials",
+        "#CookwarePakistan"
+      ]
+    },
+    {
+      "id": "2026-11-04-zero-sticking",
+      "date": "2026-11-04",
+      "type": "image",
+      "pillar": "feature",
+      "title": "Zero sticking, zero seasoning",
+      "slides": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194835_9866204c-517a-478a-89d7-9b81223981ed.png",
+          "layout": "cover",
+          "kicker": "PFOA-free granite coating",
+          "headline": "Zero sticking.\n*Zero seasoning.*",
+          "body": "Just a few drops of oil. Wash, dry, done."
+        }
+      ],
+      "alt_text": "A roti puffing up on a Tawaana black granite non-stick tawa.",
+      "caption": "Roti that puffs up and lifts right off.\n\nThe granite non-stick coating on every Tawaana piece is PFOA-free, so there's no seasoning, no oiling rituals and no rust to worry about.\n\nA few drops of oil, a medium flame, and you're cooking.\n\nMade for the roti you make every day. tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#Roti",
+        "#NonStickTawa",
+        "#PFOAFree",
+        "#DesiKitchen",
+        "#PakistaniFood"
+      ]
     }
-   ],
-   "caption": "Raw iron or non-stick? You don't have to pick anymore.\n\nRaw iron is strong but heavy, and it rusts if you skip the seasoning. Ordinary non-stick is easy, until it warps and peels.\n\nTawaana puts a PFOA-free granite non-stick coating on a super lightweight iron body. Even heat, nothing sticks, no seasoning, no rust.\n\nSwipe for the side-by-side. tawaana.com",
-   "hashtags": [
-    "#Tawaana",
-    "#NonStickTawa",
-    "#IronTawa",
-    "#DesiKitchen",
-    "#PakistaniKitchen",
-    "#KitchenEssentials",
-    "#CookwarePakistan"
-   ]
-  },
-  {
-   "id": "2026-11-04-zero-sticking",
-   "date": "2026-11-04",
-   "type": "image",
-   "pillar": "feature",
-   "title": "Zero sticking, zero seasoning",
-   "slides": [
+  ],
+  "stories": [
     {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194835_9866204c-517a-478a-89d7-9b81223981ed.png",
-     "layout": "cover",
-     "kicker": "PFOA-free granite coating",
-     "headline": "Zero sticking.\n*Zero seasoning.*",
-     "body": "Just a few drops of oil. Wash, dry, done."
+      "id": "2026-10-29-story-midday",
+      "date": "2026-10-29",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195122_c5d65836-8881-40e7-91d0-8010f13c4e25.png",
+      "position": "lower",
+      "kicker": "Breakfast idea",
+      "headline": "Anda paratha,\n*no oil pool.*",
+      "body": "A few drops is all the fry pan needs."
+    },
+    {
+      "id": "2026-10-29-story-evening",
+      "date": "2026-10-29",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-10-29-egg-slide-reel"
+    },
+    {
+      "id": "2026-10-30-story-midday",
+      "date": "2026-10-30",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195311_9e2571d3-bb40-4de3-8a02-870c477fb97d.png",
+      "position": "upper",
+      "kicker": "Did you know?",
+      "headline": "High flame isn't\n*faster.*",
+      "body": "Medium heat cooks evenly and keeps the coating like new."
+    },
+    {
+      "id": "2026-10-30-story-evening",
+      "date": "2026-10-30",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-10-30-care-guide",
+      "headline": "Save this one\n*for later.*"
+    },
+    {
+      "id": "2026-10-31-story-midday",
+      "date": "2026-10-31",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195121_a819ce25-b139-4444-9716-c5c805a14a15.png",
+      "position": "upper",
+      "kicker": "Kitchen hack",
+      "headline": "Hang it by\n*the loop.*",
+      "body": "Saves cabinet space and keeps the surface scratch-free."
+    },
+    {
+      "id": "2026-10-31-story-evening",
+      "date": "2026-10-31",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-10-31-easy-on-the-wrist",
+      "headline": "Iron,\n*made light.*"
+    },
+    {
+      "id": "2026-11-01-story-midday",
+      "date": "2026-11-01",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195120_9d466778-f9bc-4d33-86e1-ab92037897ca.png",
+      "position": "lower",
+      "kicker": "Sunday plans?",
+      "headline": "Karahi night,\n*sab ke liye.*",
+      "body": "What's cooking in your kitchen today?"
+    },
+    {
+      "id": "2026-11-01-story-evening",
+      "date": "2026-11-01",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-11-01-sunday-karahi-reel"
+    },
+    {
+      "id": "2026-11-02-story-midday",
+      "date": "2026-11-02",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195120_55f6d01e-fda6-46e9-9290-2ef463701b1d.png",
+      "position": "lower",
+      "kicker": "Nashta tip",
+      "headline": "Preheat 1–2 min\non *medium.*",
+      "body": "That's the secret to a paratha that crisps, not sticks."
+    },
+    {
+      "id": "2026-11-02-story-evening",
+      "date": "2026-11-02",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-11-02-paratha-reel"
+    },
+    {
+      "id": "2026-11-03-story-midday",
+      "date": "2026-11-03",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194833_26f8ad5d-5866-49c4-ac6e-002cbacfb7bb.png",
+      "position": "upper",
+      "kicker": "Iron, made light",
+      "headline": "Flip it with\n*one hand.*",
+      "body": "Super lightweight iron body. Easy on the wrist, every morning."
+    },
+    {
+      "id": "2026-11-03-story-evening",
+      "date": "2026-11-03",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-11-03-iron-made-light",
+      "headline": "Raw iron vs ordinary\nnon-stick vs *Tawaana.*"
+    },
+    {
+      "id": "2026-11-04-story-midday",
+      "date": "2026-11-04",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195120_42bb235c-4c9b-48af-aa1d-e6153cc30e81.png",
+      "position": "upper",
+      "kicker": "Care tip",
+      "headline": "Wood or silicone,\n*never metal.*",
+      "body": "Keeps the non-stick surface smooth for years."
+    },
+    {
+      "id": "2026-11-04-story-evening",
+      "date": "2026-11-04",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-11-04-zero-sticking",
+      "headline": "Roti that\n*lifts right off.*"
     }
-   ],
-   "alt_text": "A roti puffing up on a Tawaana black granite non-stick tawa.",
-   "caption": "Roti that puffs up and lifts right off.\n\nThe granite non-stick coating on every Tawaana piece is PFOA-free, so there's no seasoning, no oiling rituals and no rust to worry about.\n\nA few drops of oil, a medium flame, and you're cooking.\n\nMade for the roti you make every day. tawaana.com",
-   "hashtags": [
-    "#Tawaana",
-    "#Roti",
-    "#NonStickTawa",
-    "#PFOAFree",
-    "#DesiKitchen",
-    "#PakistaniFood"
-   ]
-  },
-  {
-   "id": "2026-11-05-egg-slide-reel",
-   "date": "2026-11-05",
-   "type": "reel",
-   "pillar": "product-in-action",
-   "title": "Anda jo slide kare",
-   "scenes": [
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195352_0f80961c-28e7-45ab-a427-c4aacad029be.mp4",
-     "kicker": "Anda jo slide kare",
-     "text": "A few drops of oil."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195352_0bb3d841-a280-460b-8863-cd8b874e0e3c.mp4",
-     "text": "And it *slides* right out."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195352_dc4e0985-82e9-4386-af84-b3eaaed58d3c.mp4",
-     "text": "No scraping.\nNo stuck bits.",
-     "position": "upper"
-    }
-   ],
-   "end_card": {
-    "headline": "Iron, *made light.*",
-    "sub": "Non-stick fry pan, 20cm to 30cm."
-   },
-   "cover": {
-    "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194834_cc04d15f-a111-4552-9174-3e476801a62e.png",
-    "kicker": "The breakfast test",
-    "headline": "Anda jo\n*slide kare.*"
-   },
-   "caption": "The fried egg test. Every non-stick claims it. Watch this one pass.\n\nA few drops of oil, a medium flame, and the egg slides straight out. Crisp edges, runny yolk, nothing stuck to the pan.\n\nTawaana fry pans come in 20cm to 30cm, with a wooden handle that stays comfortable to hold.\n\nAnda, omelette, shami kebab, all sorted. tawaana.com",
-   "hashtags": [
-    "#Tawaana",
-    "#FryPan",
-    "#NonStickPan",
-    "#AndaParatha",
-    "#DesiBreakfast",
-    "#PakistaniKitchen",
-    "#CookingReels"
-   ]
-  },
-  {
-   "id": "2026-11-06-care-guide",
-   "date": "2026-11-06",
-   "type": "carousel",
-   "pillar": "care",
-   "title": "4 habits that make your tawa last",
-   "slides": [
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195121_a819ce25-b139-4444-9716-c5c805a14a15.png",
-     "layout": "cover",
-     "kicker": "Care guide",
-     "headline": "4 habits that make\nyour tawa *last.*",
-     "body": "Ten seconds a day. Swipe."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195120_42bb235c-4c9b-48af-aa1d-e6153cc30e81.png",
-     "layout": "text",
-     "number": "01",
-     "kicker": "Wood or silicone only",
-     "headline": "Keep metal off the surface.",
-     "body": "Use wooden or silicone spatulas. No knives, forks or steel spoons, and don't cut food in the pan."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195311_9e2571d3-bb40-4de3-8a02-870c477fb97d.png",
-     "layout": "text",
-     "number": "02",
-     "kicker": "Low to medium flame",
-     "headline": "Gentle heat does the work.",
-     "body": "Preheat for 1 to 2 minutes on low-to-medium. Don't leave it empty on a high flame."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195728_de28c4cb-b9a5-4392-8a3e-7bf25ea64825.png",
-     "layout": "text",
-     "number": "03",
-     "kicker": "Cool, then wash",
-     "headline": "Soft sponge, warm soapy water.",
-     "body": "Let it cool first, cold water on a hot pan shocks the iron. No steel wool or scourers."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195728_a24404fb-0e73-4850-8220-a47c729e7d56.png",
-     "layout": "text",
-     "number": "04",
-     "kicker": "Dry and hang",
-     "headline": "Dry fully. Hang by the loop.",
-     "body": "Water left on the surface leaves marks. Hang it, or stack with a cloth in between."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195121_a819ce25-b139-4444-9716-c5c805a14a15.png",
-     "layout": "closing",
-     "headline": "Look after it, and\nit *looks after you.*",
-     "body": "Every piece is backed by a 1-year replacement warranty."
-    }
-   ],
-   "caption": "Want your tawa to look new for years? Four small habits.\n\n1. Wooden or silicone spatulas only\n2. Low-to-medium flame, 1 to 2 minute preheat\n3. Let it cool, then wash with a soft sponge\n4. Dry it fully and hang it by the loop\n\nDo this, and your 1-year replacement warranty has your back too.\n\nSave this for later. Full care guide at tawaana.com",
-   "hashtags": [
-    "#Tawaana",
-    "#KitchenTips",
-    "#CookwareCare",
-    "#NonStickTawa",
-    "#DesiKitchen",
-    "#KitchenHacks"
-   ]
-  },
-  {
-   "id": "2026-11-07-easy-on-the-wrist",
-   "date": "2026-11-07",
-   "type": "image",
-   "pillar": "lifestyle",
-   "title": "Easy on the wrist",
-   "slides": [
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195311_2e06cc60-7ed9-4e0c-8407-45c97cc37029.png",
-     "layout": "cover",
-     "kicker": "Super lightweight iron",
-     "headline": "Easy on the wrist,\n*every single morning.*",
-     "body": "Lift, flip and serve with one hand.",
-     "size": 78
-    }
-   ],
-   "alt_text": "A hand with mehndi holding a Tawaana tawa with a fresh roti, by its wooden handle.",
-   "caption": "If you've ever lifted a raw iron tawa, you know the feeling.\n\nTawaana is iron, made light. A super lightweight body, a comfortable wooden handle, and the even heat iron is known for.\n\nLift it, flip it, carry it to the table with one hand.\n\nBuilt for the person who makes roti every day. tawaana.com",
-   "hashtags": [
-    "#Tawaana",
-    "#NonStickTawa",
-    "#DesiKitchen",
-    "#RotiTime",
-    "#KitchenEssentials",
-    "#PakistaniHome"
-   ]
-  },
-  {
-   "id": "2026-11-08-sunday-karahi-reel",
-   "date": "2026-11-08",
-   "type": "reel",
-   "pillar": "family",
-   "title": "Sunday ki karahi",
-   "scenes": [
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195731_82c1edfb-c765-4fef-abba-bec9003fea72.mp4",
-     "kicker": "Sunday ki karahi",
-     "text": "Slow simmer.\nLid on."
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195353_9c713e58-0e8e-40ed-8540-43aeed3e2b83.mp4",
-     "text": "Steam, spice,\n*done.*"
-    },
-    {
-     "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195352_e535755a-ba5b-4c50-883d-f1c01d2e2e5e.mp4",
-     "text": "Sab ke *liye.*",
-     "position": "upper"
-    }
-   ],
-   "end_card": {
-    "headline": "Iron, *made light.*",
-    "sub": "Non-stick karahi with glass lid."
-   },
-   "cover": {
-    "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195121_b25f4121-f666-4171-b4c1-8636da16ea14.png",
-    "kicker": "Weekend special",
-    "headline": "Sunday ki\n*karahi.*"
-   },
-   "caption": "Sunday ki karahi hits different.\n\nMasala bubbling under the glass lid, so you can keep an eye on it without letting the steam out. Even heat all the way round, so nothing catches at the bottom.\n\nTawaana's non-stick karahi: super lightweight iron, PFOA-free granite coating, and a glass lid.\n\nWho's cooking in your house this Sunday? tawaana.com",
-   "hashtags": [
-    "#Tawaana",
-    "#ChickenKarahi",
-    "#SundayKarahi",
-    "#PakistaniFood",
-    "#DesiKitchen",
-    "#FamilyDinner",
-    "#NonStickKarahi"
-   ]
-  }
- ],
- "stories": [
-  {
-   "id": "2026-11-02-story-midday",
-   "date": "2026-11-02",
-   "slot": "midday",
-   "layout": "tip",
-   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195120_55f6d01e-fda6-46e9-9290-2ef463701b1d.png",
-   "position": "lower",
-   "kicker": "Nashta tip",
-   "headline": "Preheat 1–2 min\non *medium.*",
-   "body": "That's the secret to a paratha that crisps, not sticks."
-  },
-  {
-   "id": "2026-11-02-story-evening",
-   "date": "2026-11-02",
-   "slot": "evening",
-   "layout": "post",
-   "from_post": "2026-11-02-paratha-reel"
-  },
-  {
-   "id": "2026-11-03-story-midday",
-   "date": "2026-11-03",
-   "slot": "midday",
-   "layout": "tip",
-   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194833_26f8ad5d-5866-49c4-ac6e-002cbacfb7bb.png",
-   "position": "upper",
-   "kicker": "Iron, made light",
-   "headline": "Flip it with\n*one hand.*",
-   "body": "Super lightweight iron body. Easy on the wrist, every morning."
-  },
-  {
-   "id": "2026-11-03-story-evening",
-   "date": "2026-11-03",
-   "slot": "evening",
-   "layout": "post",
-   "from_post": "2026-11-03-iron-made-light",
-   "headline": "Raw iron vs ordinary\nnon-stick vs *Tawaana.*"
-  },
-  {
-   "id": "2026-11-04-story-midday",
-   "date": "2026-11-04",
-   "slot": "midday",
-   "layout": "tip",
-   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195120_42bb235c-4c9b-48af-aa1d-e6153cc30e81.png",
-   "position": "upper",
-   "kicker": "Care tip",
-   "headline": "Wood or silicone,\n*never metal.*",
-   "body": "Keeps the non-stick surface smooth for years."
-  },
-  {
-   "id": "2026-11-04-story-evening",
-   "date": "2026-11-04",
-   "slot": "evening",
-   "layout": "post",
-   "from_post": "2026-11-04-zero-sticking",
-   "headline": "Roti that\n*lifts right off.*"
-  },
-  {
-   "id": "2026-11-05-story-midday",
-   "date": "2026-11-05",
-   "slot": "midday",
-   "layout": "tip",
-   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195122_c5d65836-8881-40e7-91d0-8010f13c4e25.png",
-   "position": "lower",
-   "kicker": "Breakfast idea",
-   "headline": "Anda paratha,\n*no oil pool.*",
-   "body": "A few drops is all the fry pan needs."
-  },
-  {
-   "id": "2026-11-05-story-evening",
-   "date": "2026-11-05",
-   "slot": "evening",
-   "layout": "post",
-   "from_post": "2026-11-05-egg-slide-reel"
-  },
-  {
-   "id": "2026-11-06-story-midday",
-   "date": "2026-11-06",
-   "slot": "midday",
-   "layout": "tip",
-   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195311_9e2571d3-bb40-4de3-8a02-870c477fb97d.png",
-   "position": "upper",
-   "kicker": "Did you know?",
-   "headline": "High flame isn't\n*faster.*",
-   "body": "Medium heat cooks evenly and keeps the coating like new."
-  },
-  {
-   "id": "2026-11-06-story-evening",
-   "date": "2026-11-06",
-   "slot": "evening",
-   "layout": "post",
-   "from_post": "2026-11-06-care-guide",
-   "headline": "Save this one\n*for later.*"
-  },
-  {
-   "id": "2026-11-07-story-midday",
-   "date": "2026-11-07",
-   "slot": "midday",
-   "layout": "tip",
-   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195121_a819ce25-b139-4444-9716-c5c805a14a15.png",
-   "position": "upper",
-   "kicker": "Kitchen hack",
-   "headline": "Hang it by\n*the loop.*",
-   "body": "Saves cabinet space and keeps the surface scratch-free."
-  },
-  {
-   "id": "2026-11-07-story-evening",
-   "date": "2026-11-07",
-   "slot": "evening",
-   "layout": "post",
-   "from_post": "2026-11-07-easy-on-the-wrist",
-   "headline": "Iron,\n*made light.*"
-  },
-  {
-   "id": "2026-11-08-story-midday",
-   "date": "2026-11-08",
-   "slot": "midday",
-   "layout": "tip",
-   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195120_9d466778-f9bc-4d33-86e1-ab92037897ca.png",
-   "position": "lower",
-   "kicker": "Sunday plans?",
-   "headline": "Karahi night,\n*sab ke liye.*",
-   "body": "What's cooking in your kitchen today?"
-  },
-  {
-   "id": "2026-11-08-story-evening",
-   "date": "2026-11-08",
-   "slot": "evening",
-   "layout": "post",
-   "from_post": "2026-11-08-sunday-karahi-reel"
-  }
- ]
+  ]
 }
