@@ -162,6 +162,12 @@ def main():
                   and not log.get(p["id"], {}).get("instagram") and not log.get(p["id"], {}).get("facebook")]
         if missed:
             say("not auto-posting missed days (run with --post-id to post one):", ", ".join(missed[-5:]))
+    if a.dry_run and not due and not a.post_id:
+        upcoming = sorted((p for p in posts if p["date"] >= today and p.get("status", "approved") == "approved"),
+                          key=lambda p: p["date"])
+        due = upcoming[:1]
+        if due:
+            say("dry run: nothing due today, checking the next scheduled post:", due[0]["id"])
     if not due:
         say(f"nothing due on {today}")
         return
@@ -170,11 +176,12 @@ def main():
     ig = os.environ.get("IG_USER_ID") or META.get("instagram_user_id")
     page = os.environ.get("FB_PAGE_ID") or META.get("facebook_page_id")
     failures = []
-    if token and page and not ig and META.get("post_to_instagram", True) and not a.dry_run:
-        # find the Instagram account linked to the Page
-        ig = (call("GET", f"{GRAPH}/{page}", token, fields="instagram_business_account")
-              .get("instagram_business_account") or {}).get("id")
-        say("instagram account linked to page:", ig or "none found")
+    if token and page:
+        # confirms the token works and finds the Instagram account linked to the Page
+        info = call("GET", f"{GRAPH}/{page}", token, fields="name,instagram_business_account{id,username}")
+        linked = info.get("instagram_business_account") or {}
+        say("token OK for page:", info.get("name"), "| instagram linked:", linked.get("username") or "none found")
+        ig = ig or linked.get("id")
 
     for p in due:
         say(f"{p['id']} ({p['type']}, {len(p['media'])} file(s))")
