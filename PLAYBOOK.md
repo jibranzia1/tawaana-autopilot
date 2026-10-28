@@ -22,7 +22,7 @@ Soft call to action only: "tawaana.com" or "link in bio". Validation warns on sa
 Warm, confident, desi kitchen. Plain English with short Roman Urdu lines ("Subah ka paratha", "Har ghar ki zaroorat").
 Short sentences. One idea per slide. No emoji walls (max 2 per caption). No exclamation spam.
 
-## Weekly mix (7 posts, one a day at 19:30 PKT)
+## Weekly mix (7 feed posts at about 7:45 PM PKT, plus 14 stories)
 
 | Day | Format | Pillar |
 |---|---|---|
@@ -35,6 +35,12 @@ Short sentences. One idea per slide. No emoji walls (max 2 per caption). No excl
 | Sun | Reel | Family meal / weekend cooking |
 
 Rotate products across weeks so each gets at least one hero moment a fortnight.
+
+## Stories (2 a day, Instagram + Facebook)
+
+- **1 PM, midday story** (`"slot": "midday"`, `"layout": "tip"`): one full-bleed 9:16 photo with a short tip, feature or "did you know". Reuse unused frames from the week's generation where they fit; otherwise generate one 9:16 image. Keep text short: kicker, 2-line headline, one sentence. Use `"position": "upper"` when the product sits in the lower half of the photo.
+- **8 PM, evening story** (`"slot": "evening"`, `"layout": "post"`, `"from_post": "<post id>"`): repurposes that day's feed post. Reels become an 8-second clip with "New reel" pills; carousels and statics become a card of slide 1 with "Swipe through it on our profile". Optional `headline` overrides the post title.
+- Stories are plain images or clips. The Graph API can't add link, poll or music stickers, so the call to action is the handle (`@tawaanapk`) or tawaana.com in the frame.
 
 ## Visual rules
 
@@ -65,6 +71,11 @@ Rotate products across weeks so each gets at least one hero moment a fortnight.
        {"src": "<image url>", "layout": "cover|text|table|closing", "kicker": "", "headline": "", "body": "",
         "number": "01", "table": {"cols": ["", "Tawaana", "A", "B"], "rows": [["Row", "yes", "no", "yes"]]}}]},
     {"id": "...", "type": "image", "slides": [{"src": "...", "layout": "cover", "...": "..."}]}
+  ],
+  "stories": [
+    {"id": "2026-11-02-story-midday", "date": "2026-11-02", "slot": "midday", "layout": "tip", "src": "<9:16 image url>",
+     "position": "lower|upper", "kicker": "...", "headline": "...", "body": "..."},
+    {"id": "2026-11-02-story-evening", "date": "2026-11-02", "slot": "evening", "layout": "post", "from_post": "2026-11-02-paratha-reel"}
   ]
 }
 ```

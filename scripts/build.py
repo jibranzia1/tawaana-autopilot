@@ -214,6 +214,46 @@ def build_reel(page, post: dict, outdir: Path, logo: Path | None, tmp: Path) -> 
     return ["reel.mp4"], "cover.jpg"
 
 
+def build_story(page, story: dict, built: dict, briefs: dict, week: str, logo: Path | None, tmp: Path) -> tuple[str, str]:
+    """Render one story. Returns (file name, type). Midday = tip card, evening = today's post repurposed."""
+    W, H = render.REEL_W, render.REEL_H
+    outdir = ROOT / "docs" / "media" / week / "stories"
+    outdir.mkdir(parents=True, exist_ok=True)
+    sid = story["id"]
+    layout = story.get("layout", "tip")
+    if layout == "tip":
+        png = tmp / f"{sid}.png"
+        shot(page, render.story_tip(story, fetch(story["src"]), logo), png, W, H)
+        to_jpeg(png, outdir / f"{sid}.jpg")
+        return f"{sid}.jpg", "image"
+    if layout == "post":
+        post = built[story["from_post"]]
+        bp = briefs[story["from_post"]]
+        st = dict(story)
+        st.setdefault("headline", bp.get("title", ""))
+        if post["type"] == "reel":
+            src = ROOT / post["files"][0]
+            dur = float(story.get("duration", 8))
+            ov = tmp / f"{sid}-ov.png"
+            st.setdefault("kicker", "New reel")
+            shot(page, render.story_reel_overlay(st), ov, W, H, transparent=True)
+            fc = (f"[1:v]format=rgba,fade=in:st=0.2:d=0.4:alpha=1[o];[0:v][o]overlay=0:0:shortest=1,"
+                  f"fade=out:st={dur - 0.5}:d=0.5,format=yuv420p[v];[0:a]afade=t=out:st={dur - 0.8}:d=0.8[a]")
+            run(["ffmpeg", "-y", "-t", str(dur), "-i", str(src), "-loop", "1", "-t", str(dur), "-i", str(ov),
+                 "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-t", str(dur),
+                 "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-pix_fmt", "yuv420p",
+                 "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(outdir / f"{sid}.mp4")])
+            return f"{sid}.mp4", "video"
+        st.setdefault("kicker", "New carousel" if post["type"] == "carousel" else "New post")
+        if post["type"] == "carousel":
+            st.setdefault("body", "Swipe through it on our profile")
+        png = tmp / f"{sid}.png"
+        shot(page, render.story_post(st, ROOT / post["files"][0], logo), png, W, H)
+        to_jpeg(png, outdir / f"{sid}.jpg")
+        return f"{sid}.jpg", "image"
+    raise ValueError(f"unknown story layout {layout}")
+
+
 def build(brief_path: Path):
     brief = json.loads(brief_path.read_text())
     week = brief["week"]
@@ -253,6 +293,21 @@ def build(brief_path: Path):
             entry["fb_caption"] = post.get("fb_caption", post["caption"]).strip()
             entry["alt_text"] = post.get("alt_text", "")
             queue["posts"].append(entry)
+
+        built = {p["id"]: p for p in queue["posts"]}
+        briefs = {p["id"]: p for p in brief["posts"]}
+        queue["stories"] = []
+        sdir = media_root / "stories"
+        if sdir.exists():
+            shutil.rmtree(sdir)
+        for story in brief.get("stories", []):
+            log("story", story["id"], story.get("layout", "tip"))
+            name, kind = build_story(page, story, built, briefs, week, logo, tmp)
+            queue["stories"].append({
+                "id": story["id"], "date": story["date"], "slot": story["slot"], "type": kind,
+                "status": story.get("status", "approved"),
+                "media": [f"{base}/stories/{name}"], "files": [f"docs/media/{week}/stories/{name}"],
+            })
         browser.close()
 
     qpath = ROOT / "queue" / f"{week}.json"
@@ -275,6 +330,14 @@ def write_preview(queue: dict):
         else:
             lines.append(" ".join(f"<img src=\"{{RAW}}/{f}\" width=\"200\">" for f in p["files"]))
         lines += ["", "```text", p["caption"], "```", ""]
+    if queue.get("stories"):
+        lines += ["## Stories (1 PM and 8 PM PKT)", ""]
+        for st in queue["stories"]:
+            f = st["files"][0]
+            shown = (f"[\u25b6 {st['id']}]({{BLOB}}/{f})" if st["type"] == "video"
+                     else f"<img src=\"{{RAW}}/{f}\" width=\"140\">")
+            lines.append(f"- {st['date']} {st['slot']}: {shown}")
+        lines.append("")
     (ROOT / "queue" / f"{queue['week']}.preview.md").write_text("\n".join(lines) + "\n")
 
 

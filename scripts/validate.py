@@ -79,11 +79,43 @@ def check_post(p: dict, errs: list[str], warns: list[str]):
                 errs.append(f"{pid}: reel over 100MB")
 
 
+def check_story(st: dict, errs: list[str]):
+    sid = st.get("id", "?")
+    for k in ("id", "date", "slot", "type", "media", "files"):
+        if k not in st:
+            errs.append(f"story {sid}: missing '{k}'")
+            return
+    if st["slot"] not in ("midday", "evening"):
+        errs.append(f"story {sid}: slot must be midday or evening")
+    path = ROOT / st["files"][0]
+    if not path.exists():
+        errs.append(f"story {sid}: missing file {st['files'][0]}")
+        return
+    if path.suffix == ".jpg":
+        if Image.open(path).size != (1080, 1920):
+            errs.append(f"story {sid}: image must be 1080x1920")
+    else:
+        info = probe(path)
+        v = next((s for s in info["streams"] if s["codec_type"] == "video"), None)
+        if not v or v["codec_name"] != "h264" or (v["width"], v["height"]) != (1080, 1920):
+            errs.append(f"story {sid}: video must be H.264 1080x1920")
+        if float(info["format"]["duration"]) > 60:
+            errs.append(f"story {sid}: video longer than 60s")
+
+
 def main():
     files = [Path(a) for a in sys.argv[1:]] or sorted((ROOT / "queue").glob("*.json"))
     errs, warns, dates = [], [], {}
     for q in files:
         data = json.loads(Path(q).read_text())
+        slots = {}
+        for st in data.get("stories", []):
+            check_story(st, errs)
+            if st.get("status", "approved") == "approved":
+                slots.setdefault(st.get("date"), []).append(st.get("slot"))
+        for d, sl in slots.items():
+            if len(sl) != len(set(sl)):
+                warns.append(f"{d}: two stories in the same slot")
         for p in data.get("posts", []):
             check_post(p, errs, warns)
             if p.get("status", "approved") == "approved":

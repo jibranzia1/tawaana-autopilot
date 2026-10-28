@@ -214,3 +214,70 @@ def reel_cover(cover: dict, photo: Path, logo: Path | None) -> str:
   <div style="position:absolute;left:0;right:0;top:1290px;display:flex;justify-content:center">{_mark(logo, 44)}</div>
 </div>"""
     return _doc(css, inner)
+
+
+# ---------------------------------------------------------------- stories (9:16)
+# Instagram/Facebook cover roughly the top 250px and bottom 340px with UI, so text stays inside.
+
+HANDLE = BRAND.get("instagram_handle", "@tawaanapk")
+
+
+def story_tip(story: dict, photo: Path, logo: Path | None) -> str:
+    """Midday story: full-bleed photo, tip or feature text, website pill."""
+    css = _base_css(REEL_W, REEL_H)
+    pos = story.get("position", "lower")
+    block = "top:330px" if pos == "upper" else "bottom:470px"
+    inner = f"""
+<div class="frame"><img class="photo" src="file://{photo}" style="object-position:{story.get('focus', 'center')}">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,9,.72) 0%,rgba(11,10,9,0) 22%)"></div>
+  <div style="position:absolute;inset:0;background:{'linear-gradient(180deg,rgba(11,10,9,0) 10%,rgba(11,10,9,.80) 26%,rgba(11,10,9,.80) 46%,rgba(11,10,9,0) 60%)' if pos == 'upper' else 'linear-gradient(0deg,rgba(11,10,9,.92) 0%,rgba(11,10,9,.82) 34%,rgba(11,10,9,.55) 48%,rgba(11,10,9,0) 66%)'}"></div>
+  <div style="position:absolute;left:0;right:0;top:250px;display:flex;justify-content:center">{_mark(logo, 52)}</div>
+  <div style="position:absolute;left:90px;right:90px;{block};text-shadow:0 2px 18px rgba(0,0,0,.6)">
+    <div class="kicker" style="font-size:32px;font-weight:600;color:#E8A272">{esc(story.get('kicker'))}</div>
+    <div class="headline" style="font-size:{story.get('size', 96)}px;margin-top:24px">{esc(story.get('headline'))}</div>
+    <div class="body" style="font-size:42px;margin-top:26px">{esc(story.get('body'))}</div>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:350px;display:flex;justify-content:center">
+    <div style="font:500 30px Jost;letter-spacing:.26em;color:{C['cream']};border:1.5px solid rgba(242,235,225,.55);border-radius:999px;padding:16px 38px;background:rgba(11,10,9,.35)">{esc(story.get('footer', BRAND['website'].upper()))}</div>
+  </div>
+</div>"""
+    return _doc(css, inner)
+
+
+def story_post(story: dict, photo: Path, logo: Path | None) -> str:
+    """Evening story: today's feed post shown as a card, pointing people to the profile."""
+    css = _base_css(REEL_W, REEL_H)
+    inner = f"""
+<div class="frame" style="background:radial-gradient(ellipse at 50% 40%,#2a221c 0%,{C['deep_iron']} 72%)">
+  <img class="photo" src="file://{photo}" style="opacity:.22;filter:blur(28px) saturate(.8);transform:scale(1.15)">
+  <div style="position:absolute;left:0;right:0;top:250px;text-align:center">
+    <div class="kicker" style="font-size:32px;font-weight:600;color:#E8A272">{esc(story.get('kicker', 'New post'))}</div>
+    <div class="headline" style="font-size:{story.get('size', 74)}px;margin:22px 90px 0">{esc(story.get('headline'))}</div>
+  </div>
+  <div style="position:absolute;left:200px;right:200px;top:{story.get('card_top', 520)}px;aspect-ratio:4/5;border-radius:30px;overflow:hidden;
+              box-shadow:0 30px 80px rgba(0,0,0,.55);outline:2px solid rgba(192,122,69,.45);outline-offset:-2px">
+    <img src="file://{photo}" style="width:100%;height:100%;object-fit:cover">
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:350px;text-align:center">
+    <div class="body" style="font-size:38px">{esc(story.get('body', 'Now on our profile'))}</div>
+    <div style="font:500 34px Jost;letter-spacing:.12em;color:{C['ember']};margin-top:14px">{esc(HANDLE)}</div>
+  </div>
+</div>"""
+    return _doc(css, inner)
+
+
+def story_reel_overlay(story: dict) -> str:
+    """Transparent overlay for a Reel clip reposted as a story."""
+    css = _base_css(REEL_W, REEL_H, transparent=True)
+    pill = (f"font:600 30px Jost;letter-spacing:.24em;text-transform:uppercase;color:{C['cream']};"
+            f"background:rgba(11,10,9,.72);border:1.5px solid rgba(192,122,69,.7);border-radius:999px;padding:16px 36px")
+    inner = f"""
+<div class="frame">
+  <div style="position:absolute;left:0;right:0;top:250px;display:flex;justify-content:center">
+    <div style="{pill}">{esc(story.get('kicker', 'New reel'))}</div>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:350px;display:flex;justify-content:center">
+    <div style="{pill};text-transform:none;letter-spacing:.06em">{esc(story.get('body', 'Watch it on ' + HANDLE))}</div>
+  </div>
+</div>"""
+    return _doc(css, inner)

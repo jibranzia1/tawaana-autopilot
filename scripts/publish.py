@@ -2,7 +2,8 @@
 
     python scripts/publish.py                  # post whatever is due today (PKT)
     python scripts/publish.py --dry-run        # check everything, post nothing
-    python scripts/publish.py --post-id <id>   # force one post (e.g. a missed day)
+    python scripts/publish.py --post-id <id>   # force one post or story (e.g. a missed day)
+    python scripts/publish.py --stories midday # publish today's 1 PM story (or "evening" for 8 PM)
 
 Needs env META_PAGE_TOKEN (a Page access token with instagram_content_publish and
 pages_manage_posts). Page / IG ids come from config/brand.json or env
@@ -63,7 +64,10 @@ def call(method: str, url: str, token: str, **params):
 
 
 def check_url(url: str):
-    r = requests.head(url, allow_redirects=True, timeout=30)
+    try:
+        r = requests.head(url, allow_redirects=True, timeout=30)
+    except requests.RequestException as e:
+        raise MetaError(f"media not reachable: {url} ({e.__class__.__name__})") from e
     if r.status_code != 200:
         raise MetaError(f"media not reachable yet ({r.status_code}): {url}")
 
@@ -129,47 +133,78 @@ def fb_publish(post: dict, token: str, page: str) -> dict:
     return {"id": pid, "permalink": f"https://www.facebook.com/{pid}"}
 
 
+# ------------------------------------------------------------------ stories
+
+def ig_story(story: dict, token: str, ig: str) -> dict:
+    url = story["media"][0]
+    key = "video_url" if story["type"] == "video" else "image_url"
+    c = call("POST", f"{GRAPH}/{ig}/media", token, media_type="STORIES", **{key: url})["id"]
+    ig_wait(c, token)
+    mid = call("POST", f"{GRAPH}/{ig}/media_publish", token, creation_id=c)["id"]
+    return {"id": mid}
+
+
+def fb_story(story: dict, token: str, page: str) -> dict:
+    url = story["media"][0]
+    if story["type"] == "image":
+        photo = call("POST", f"{GRAPH}/{page}/photos", token, url=url, published="false")["id"]
+        r = call("POST", f"{GRAPH}/{page}/photo_stories", token, photo_id=photo)
+        return {"id": r.get("post_id") or photo}
+    start = call("POST", f"{GRAPH}/{page}/video_stories", token, upload_phase="start")
+    up = requests.post(start["upload_url"], headers={"Authorization": f"OAuth {token}", "file_url": url}, timeout=300)
+    if not up.ok:
+        raise MetaError(f"story video upload failed ({up.status_code})")
+    r = call("POST", f"{GRAPH}/{page}/video_stories", token, upload_phase="finish", video_id=start["video_id"])
+    return {"id": r.get("post_id") or start["video_id"]}
+
+
 # ------------------------------------------------------------------ main
 
-def load_queue() -> list[dict]:
-    posts = []
+def load_queue(kind: str = "posts") -> list[dict]:
+    items = []
     for q in sorted((ROOT / "queue").glob("*.json")):
-        for p in json.loads(q.read_text())["posts"]:
+        for p in json.loads(q.read_text()).get(kind, []):
             p["_queue"] = q.name
-            posts.append(p)
-    return posts
+            items.append(p)
+    return items
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--post-id")
+    ap.add_argument("--post-id", help="force one post or story id")
+    ap.add_argument("--stories", choices=["midday", "evening"], help="publish that story slot instead of the feed post")
     ap.add_argument("--date", help="YYYY-MM-DD (default: today in PKT)")
     a = ap.parse_args()
 
+    kind = "stories" if a.stories else "posts"
     now = datetime.now(TZ)
     today = a.date or now.strftime("%Y-%m-%d")
     log = json.loads(LOG.read_text()) if LOG.exists() else {}
-    posts = load_queue()
+    items = load_queue(kind)
+    if a.post_id:
+        items = load_queue("posts") + load_queue("stories")
+
+    def ok(p):
+        return p.get("status", "approved") == "approved" and (kind == "posts" or p.get("slot") == a.stories)
 
     if a.post_id:
-        due = [p for p in posts if p["id"] == a.post_id]
+        due = [p for p in items if p["id"] == a.post_id]
         if not due:
-            sys.exit(f"post {a.post_id} not found in queue/")
+            sys.exit(f"{a.post_id} not found in queue/")
     else:
-        due = [p for p in posts if p["date"] == today and p.get("status", "approved") == "approved"]
-        missed = [p["id"] for p in posts if p["date"] < today and p.get("status", "approved") == "approved"
+        due = [p for p in items if p["date"] == today and ok(p)]
+        missed = [p["id"] for p in items if p["date"] < today and ok(p)
                   and not log.get(p["id"], {}).get("instagram") and not log.get(p["id"], {}).get("facebook")]
         if missed:
-            say("not auto-posting missed days (run with --post-id to post one):", ", ".join(missed[-5:]))
+            say("not auto-posting missed items (run with --post-id to post one):", ", ".join(missed[-5:]))
     if a.dry_run and not due and not a.post_id:
-        upcoming = sorted((p for p in posts if p["date"] >= today and p.get("status", "approved") == "approved"),
-                          key=lambda p: p["date"])
+        upcoming = sorted((p for p in items if p["date"] >= today and ok(p)), key=lambda p: p["date"])
         due = upcoming[:1]
         if due:
-            say("dry run: nothing due today, checking the next scheduled post:", due[0]["id"])
+            say("dry run: nothing due today, checking the next scheduled item:", due[0]["id"])
     if not due:
-        say(f"nothing due on {today}")
+        say(f"nothing due on {today}" + (f" ({a.stories} story)" if a.stories else ""))
         return
 
     token = os.environ.get("META_PAGE_TOKEN", "")
@@ -184,20 +219,23 @@ def main():
         ig = ig or linked.get("id")
 
     for p in due:
-        say(f"{p['id']} ({p['type']}, {len(p['media'])} file(s))")
+        is_story = "slot" in p
+        say(f"{p['id']} ({'story ' if is_story else ''}{p['type']}, {len(p['media'])} file(s))")
         for u in p["media"] + ([p["cover"]] if p.get("cover") else []):
             check_url(u)
         if a.dry_run:
-            say("  dry run: media reachable, caption", len(p["caption"]), "chars")
+            say("  dry run: media reachable" + ("" if is_story else f", caption {len(p['caption'])} chars"))
             continue
         if not token:
             sys.exit("META_PAGE_TOKEN secret is not set")
         rec = log.setdefault(p["id"], {})
         targets = []
         if META.get("post_to_instagram", True):
-            targets.append(("instagram", lambda: ig_publish(p, token, ig), ig))
+            targets.append(("instagram", (lambda p=p: ig_story(p, token, ig)) if is_story
+                            else (lambda p=p: ig_publish(p, token, ig)), ig))
         if META.get("post_to_facebook", True):
-            targets.append(("facebook", lambda: fb_publish(p, token, page), page))
+            targets.append(("facebook", (lambda p=p: fb_story(p, token, page)) if is_story
+                            else (lambda p=p: fb_publish(p, token, page)), page))
         for name, fn, account in targets:
             if rec.get(name):
                 say(f"  {name}: already posted, skipping")
@@ -209,7 +247,7 @@ def main():
                 res = fn()
                 res["at"] = datetime.now(TZ).isoformat(timespec="seconds")
                 rec[name] = res
-                say(f"  {name}: posted {res.get('permalink')}")
+                say(f"  {name}: posted {res.get('permalink') or res.get('id')}")
             except MetaError as e:
                 failures.append(f"{p['id']}/{name}: {e}")
                 say(f"  {name}: FAILED {e}")

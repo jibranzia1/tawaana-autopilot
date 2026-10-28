@@ -1,13 +1,23 @@
 name: Publish daily post
 
-# 14:47 UTC = 7:47 PM Pakistan time. GitHub may start scheduled runs a few minutes late.
+# All times Pakistan (UTC+5). GitHub may start scheduled runs a few minutes late.
+#   07:52 UTC = 12:52 PM  midday story
+#   14:47 UTC =  7:47 PM  feed post (Reel / carousel / static)
+#   15:07 UTC =  8:07 PM  evening story (today's post, repurposed)
 on:
   schedule:
+    - cron: "52 7 * * *"
     - cron: "47 14 * * *"
+    - cron: "7 15 * * *"
   workflow_dispatch:
     inputs:
+      kind:
+        description: "What to publish"
+        type: choice
+        options: [feed post, midday story, evening story]
+        default: feed post
       post_id:
-        description: "Force-publish one post id (leave empty for today's post)"
+        description: "Force-publish one post or story id (leave empty for today's)"
         required: false
       dry_run:
         description: "Check only, do not post"
@@ -41,10 +51,14 @@ jobs:
           META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
           FB_PAGE_ID: ${{ vars.FB_PAGE_ID }}
           IG_USER_ID: ${{ vars.IG_USER_ID }}
+          SCHEDULE: ${{ github.event.schedule }}
+          KIND: ${{ github.event.inputs.kind }}
         run: |
           ARGS=""
-          [ "${{ github.event.inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
-          [ -n "${{ github.event.inputs.post_id }}" ] && ARGS="$ARGS --post-id ${{ github.event.inputs.post_id }}"
+          if [ "$SCHEDULE" = "52 7 * * *" ] || [ "$KIND" = "midday story" ]; then ARGS="--stories midday"; fi
+          if [ "$SCHEDULE" = "7 15 * * *" ] || [ "$KIND" = "evening story" ]; then ARGS="--stories evening"; fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ -n "${{ github.event.inputs.post_id }}" ]; then ARGS="$ARGS --post-id ${{ github.event.inputs.post_id }}"; fi
           python scripts/publish.py $ARGS
 
       - name: Save publish log
@@ -54,5 +68,5 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add log/published.json 2>/dev/null || exit 0
           git diff --cached --quiet && exit 0
-          git commit -m "Publish log $(TZ=Asia/Karachi date +%F)"
-          git push
+          git commit -m "Publish log $(TZ=Asia/Karachi date '+%F %H:%M')"
+          git pull --rebase --quiet && git push
