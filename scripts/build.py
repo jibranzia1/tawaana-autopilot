@@ -256,6 +256,7 @@ def build(brief_path: Path):
         browser.close()
 
     qpath = ROOT / "queue" / f"{week}.json"
+    qpath.parent.mkdir(exist_ok=True)
     qpath.write_text(json.dumps(queue, indent=2, ensure_ascii=False) + "\n")
     log("wrote", qpath.relative_to(ROOT), "with", len(queue["posts"]), "posts")
     write_preview(queue)
