@@ -359,5 +359,137 @@
     "#NonStickKarahi"
    ]
   }
+ ],
+ "stories": [
+  {
+   "id": "2026-11-02-story-midday",
+   "date": "2026-11-02",
+   "slot": "midday",
+   "layout": "tip",
+   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195120_55f6d01e-fda6-46e9-9290-2ef463701b1d.png",
+   "position": "lower",
+   "kicker": "Nashta tip",
+   "headline": "Preheat 1–2 min\non *medium.*",
+   "body": "That's the secret to a paratha that crisps, not sticks."
+  },
+  {
+   "id": "2026-11-02-story-evening",
+   "date": "2026-11-02",
+   "slot": "evening",
+   "layout": "post",
+   "from_post": "2026-11-02-paratha-reel"
+  },
+  {
+   "id": "2026-11-03-story-midday",
+   "date": "2026-11-03",
+   "slot": "midday",
+   "layout": "tip",
+   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_194833_26f8ad5d-5866-49c4-ac6e-002cbacfb7bb.png",
+   "position": "upper",
+   "kicker": "Iron, made light",
+   "headline": "Flip it with\n*one hand.*",
+   "body": "Super lightweight iron body. Easy on the wrist, every morning."
+  },
+  {
+   "id": "2026-11-03-story-evening",
+   "date": "2026-11-03",
+   "slot": "evening",
+   "layout": "post",
+   "from_post": "2026-11-03-iron-made-light",
+   "headline": "Raw iron vs ordinary\nnon-stick vs *Tawaana.*"
+  },
+  {
+   "id": "2026-11-04-story-midday",
+   "date": "2026-11-04",
+   "slot": "midday",
+   "layout": "tip",
+   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195120_42bb235c-4c9b-48af-aa1d-e6153cc30e81.png",
+   "position": "upper",
+   "kicker": "Care tip",
+   "headline": "Wood or silicone,\n*never metal.*",
+   "body": "Keeps the non-stick surface smooth for years."
+  },
+  {
+   "id": "2026-11-04-story-evening",
+   "date": "2026-11-04",
+   "slot": "evening",
+   "layout": "post",
+   "from_post": "2026-11-04-zero-sticking",
+   "headline": "Zero sticking.\n*Zero seasoning.*"
+  },
+  {
+   "id": "2026-11-05-story-midday",
+   "date": "2026-11-05",
+   "slot": "midday",
+   "layout": "tip",
+   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195122_c5d65836-8881-40e7-91d0-8010f13c4e25.png",
+   "position": "lower",
+   "kicker": "Breakfast idea",
+   "headline": "Anda paratha,\n*no oil pool.*",
+   "body": "A few drops is all the fry pan needs."
+  },
+  {
+   "id": "2026-11-05-story-evening",
+   "date": "2026-11-05",
+   "slot": "evening",
+   "layout": "post",
+   "from_post": "2026-11-05-egg-slide-reel"
+  },
+  {
+   "id": "2026-11-06-story-midday",
+   "date": "2026-11-06",
+   "slot": "midday",
+   "layout": "tip",
+   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195311_9e2571d3-bb40-4de3-8a02-870c477fb97d.png",
+   "position": "upper",
+   "kicker": "Did you know?",
+   "headline": "High flame isn't\n*faster.*",
+   "body": "Medium heat cooks evenly and keeps the coating like new."
+  },
+  {
+   "id": "2026-11-06-story-evening",
+   "date": "2026-11-06",
+   "slot": "evening",
+   "layout": "post",
+   "from_post": "2026-11-06-care-guide",
+   "headline": "4 habits that make\nyour tawa *last.*"
+  },
+  {
+   "id": "2026-11-07-story-midday",
+   "date": "2026-11-07",
+   "slot": "midday",
+   "layout": "tip",
+   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195121_a819ce25-b139-4444-9716-c5c805a14a15.png",
+   "position": "upper",
+   "kicker": "Kitchen hack",
+   "headline": "Hang it by\n*the loop.*",
+   "body": "Saves cabinet space and keeps the surface scratch-free."
+  },
+  {
+   "id": "2026-11-07-story-evening",
+   "date": "2026-11-07",
+   "slot": "evening",
+   "layout": "post",
+   "from_post": "2026-11-07-easy-on-the-wrist",
+   "headline": "Easy on the wrist,\n*every single morning.*"
+  },
+  {
+   "id": "2026-11-08-story-midday",
+   "date": "2026-11-08",
+   "slot": "midday",
+   "layout": "tip",
+   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261028_195120_9d466778-f9bc-4d33-86e1-ab92037897ca.png",
+   "position": "lower",
+   "kicker": "Sunday plans?",
+   "headline": "Karahi night,\n*sab ke liye.*",
+   "body": "What's cooking in your kitchen today?"
+  },
+  {
+   "id": "2026-11-08-story-evening",
+   "date": "2026-11-08",
+   "slot": "evening",
+   "layout": "post",
+   "from_post": "2026-11-08-sunday-karahi-reel"
+  }
  ]
 }
