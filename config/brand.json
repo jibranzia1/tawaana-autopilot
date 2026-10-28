@@ -1,0 +1,31 @@
+{
+  "brand": "Tawaana",
+  "website": "tawaana.com",
+  "timezone": "Asia/Karachi",
+  "logo_url": "https://tawaana.com/cdn/shop/files/tawaana-logo-cream.png",
+
+  "colors": {
+    "iron": "#121110",
+    "deep_iron": "#0B0A09",
+    "copper": "#C07A45",
+    "ember": "#D89060",
+    "cream": "#F2EBE1",
+    "ash": "#A39B90"
+  },
+  "fonts": {
+    "display": "Playfair Display",
+    "body": "Jost"
+  },
+
+  "meta": {
+    "graph_version": "v24.0",
+    "facebook_page_id": "",
+    "instagram_user_id": "",
+    "post_to_facebook": true,
+    "post_to_instagram": true
+  },
+
+  "media_base_url": "https://jibranzia1.github.io/tawaana-autopilot/media",
+
+  "hashtags_default": ["#Tawaana", "#NonStickTawa", "#DesiKitchen", "#PakistaniFood", "#KitchenEssentials"]
+}
