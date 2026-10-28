@@ -154,5 +154,189 @@
       "fb_caption": "Sunday ki karahi hits different.\n\nMasala bubbling under the glass lid, so you can keep an eye on it without letting the steam out. Even heat all the way round, so nothing catches at the bottom.\n\nTawaana's non-stick karahi: super lightweight iron, PFOA-free granite coating, and a glass lid.\n\nWho's cooking in your house this Sunday? tawaana.com",
       "alt_text": ""
     }
+  ],
+  "stories": [
+    {
+      "id": "2026-11-02-story-midday",
+      "date": "2026-11-02",
+      "slot": "midday",
+      "type": "image",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-02-story-midday.jpg"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-02-story-midday.jpg"
+      ]
+    },
+    {
+      "id": "2026-11-02-story-evening",
+      "date": "2026-11-02",
+      "slot": "evening",
+      "type": "video",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-02-story-evening.mp4"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-02-story-evening.mp4"
+      ]
+    },
+    {
+      "id": "2026-11-03-story-midday",
+      "date": "2026-11-03",
+      "slot": "midday",
+      "type": "image",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-03-story-midday.jpg"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-03-story-midday.jpg"
+      ]
+    },
+    {
+      "id": "2026-11-03-story-evening",
+      "date": "2026-11-03",
+      "slot": "evening",
+      "type": "image",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-03-story-evening.jpg"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-03-story-evening.jpg"
+      ]
+    },
+    {
+      "id": "2026-11-04-story-midday",
+      "date": "2026-11-04",
+      "slot": "midday",
+      "type": "image",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-04-story-midday.jpg"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-04-story-midday.jpg"
+      ]
+    },
+    {
+      "id": "2026-11-04-story-evening",
+      "date": "2026-11-04",
+      "slot": "evening",
+      "type": "image",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-04-story-evening.jpg"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-04-story-evening.jpg"
+      ]
+    },
+    {
+      "id": "2026-11-05-story-midday",
+      "date": "2026-11-05",
+      "slot": "midday",
+      "type": "image",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-05-story-midday.jpg"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-05-story-midday.jpg"
+      ]
+    },
+    {
+      "id": "2026-11-05-story-evening",
+      "date": "2026-11-05",
+      "slot": "evening",
+      "type": "video",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-05-story-evening.mp4"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-05-story-evening.mp4"
+      ]
+    },
+    {
+      "id": "2026-11-06-story-midday",
+      "date": "2026-11-06",
+      "slot": "midday",
+      "type": "image",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-06-story-midday.jpg"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-06-story-midday.jpg"
+      ]
+    },
+    {
+      "id": "2026-11-06-story-evening",
+      "date": "2026-11-06",
+      "slot": "evening",
+      "type": "image",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-06-story-evening.jpg"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-06-story-evening.jpg"
+      ]
+    },
+    {
+      "id": "2026-11-07-story-midday",
+      "date": "2026-11-07",
+      "slot": "midday",
+      "type": "image",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-07-story-midday.jpg"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-07-story-midday.jpg"
+      ]
+    },
+    {
+      "id": "2026-11-07-story-evening",
+      "date": "2026-11-07",
+      "slot": "evening",
+      "type": "image",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-07-story-evening.jpg"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-07-story-evening.jpg"
+      ]
+    },
+    {
+      "id": "2026-11-08-story-midday",
+      "date": "2026-11-08",
+      "slot": "midday",
+      "type": "image",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-08-story-midday.jpg"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-08-story-midday.jpg"
+      ]
+    },
+    {
+      "id": "2026-11-08-story-evening",
+      "date": "2026-11-08",
+      "slot": "evening",
+      "type": "video",
+      "status": "approved",
+      "media": [
+        "https://jibranzia1.github.io/tawaana-autopilot/media/2026-W45/stories/2026-11-08-story-evening.mp4"
+      ],
+      "files": [
+        "docs/media/2026-W45/stories/2026-11-08-story-evening.mp4"
+      ]
+    }
   ]
 }
