@@ -36,6 +36,8 @@ Short sentences. One idea per slide. No emoji walls (max 2 per caption). No excl
 
 Rotate products across weeks so each gets at least one hero moment a fortnight.
 
+**Coverage rule (no empty days):** before writing a brief, find the latest date already in `queue/*.json`. The brief must cover every day from the day after that date through the Sunday of the coming week, using the weekday mix above. Normally that is Mon–Sun (7 posts, 14 stories). If there is a gap it is longer; e.g. week 45 was pulled forward to start Thu 29 Oct, so ends Wed 4 Nov, and the 31 Oct batch must cover Thu 5 – Sun 15 Nov (11 posts, 22 stories) in `briefs/2026-W46.json` on `week/2026-W46`.
+
 ## Stories (2 a day, Instagram + Facebook)
 
 - **1 PM, midday story** (`"slot": "midday"`, `"layout": "tip"`): one full-bleed 9:16 photo with a short tip, feature or "did you know". Reuse unused frames from the week's generation where they fit; otherwise generate one 9:16 image. Keep text short: kicker, 2-line headline, one sentence. Use `"position": "upper"` when the product sits in the lower half of the photo.
