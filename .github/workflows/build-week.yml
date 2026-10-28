@@ -1,0 +1,76 @@
+name: Build week
+
+# Runs when a weekly brief lands on a week/* branch. Renders every slide and Reel,
+# commits the finished media + queue to the same branch and posts a preview on the PR.
+on:
+  push:
+    branches: ["week/**"]
+    paths: ["briefs/**", "scripts/**", "config/**"]
+  workflow_dispatch:
+    inputs:
+      brief:
+        description: "Brief file, e.g. briefs/2026-W45.json"
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          bash scripts/fetch_fonts.sh
+          python -m playwright install --with-deps chromium
+          which ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+
+      - name: Pick brief
+        id: brief
+        run: |
+          if [ -n "${{ github.event.inputs.brief }}" ]; then
+            echo "file=${{ github.event.inputs.brief }}" >> "$GITHUB_OUTPUT"
+          else
+            # branch week/2026-W45 -> briefs/2026-W45.json
+            echo "file=briefs/${GITHUB_REF_NAME#week/}.json" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Render
+        run: python scripts/build.py "${{ steps.brief.outputs.file }}"
+
+      - name: Validate
+        run: python scripts/validate.py
+
+      - name: Commit renders
+        run: |
+          git config user.name "tawaana-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/media queue assets/logo.png 2>/dev/null || git add docs/media queue
+          git diff --cached --quiet && echo "nothing to commit" || git commit -m "Render $(basename '${{ steps.brief.outputs.file }}' .json)"
+          git push
+
+      - name: Post preview on PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BR="${GITHUB_REF_NAME}"
+          WEEK=$(basename "${{ steps.brief.outputs.file }}" .json)
+          RAW="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${BR}"
+          BLOB="https://github.com/${GITHUB_REPOSITORY}/blob/${BR}"
+          sed -e "s#{RAW}#${RAW}#g" -e "s#{BLOB}#${BLOB}#g" "queue/${WEEK}.preview.md" > /tmp/preview.md
+          PR=$(gh pr list --head "$BR" --state open --json number -q '.[0].number')
+          if [ -n "$PR" ]; then gh pr comment "$PR" --body-file /tmp/preview.md; else echo "No open PR for $BR"; fi

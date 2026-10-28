@@ -1,0 +1,58 @@
+name: Publish daily post
+
+# 14:47 UTC = 7:47 PM Pakistan time. GitHub may start scheduled runs a few minutes late.
+on:
+  schedule:
+    - cron: "47 14 * * *"
+  workflow_dispatch:
+    inputs:
+      post_id:
+        description: "Force-publish one post id (leave empty for today's post)"
+        required: false
+      dry_run:
+        description: "Check only, do not post"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Publish
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ vars.FB_PAGE_ID }}
+          IG_USER_ID: ${{ vars.IG_USER_ID }}
+        run: |
+          ARGS=""
+          [ "${{ github.event.inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          [ -n "${{ github.event.inputs.post_id }}" ] && ARGS="$ARGS --post-id ${{ github.event.inputs.post_id }}"
+          python scripts/publish.py $ARGS
+
+      - name: Save publish log
+        if: always()
+        run: |
+          git config user.name "tawaana-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          git add log/published.json 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -m "Publish log $(TZ=Asia/Karachi date +%F)"
+          git push
