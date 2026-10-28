@@ -171,13 +171,13 @@ def reel_overlay(scene: dict) -> str:
     pos = scene.get("position", "lower")
     top = 300 if pos == "upper" else None
     place = f"top:{top}px" if top else "bottom:560px"
-    shade = ("linear-gradient(180deg,rgba(11,10,9,.70) 0%,rgba(11,10,9,0) 40%)" if pos == "upper"
-             else "linear-gradient(0deg,rgba(11,10,9,.78) 0%,rgba(11,10,9,.45) 38%,rgba(11,10,9,0) 60%)")
+    shade = ("linear-gradient(180deg,rgba(11,10,9,.86) 0%,rgba(11,10,9,.70) 22%,rgba(11,10,9,.35) 34%,rgba(11,10,9,0) 46%)" if pos == "upper"
+             else "linear-gradient(0deg,rgba(11,10,9,.88) 0%,rgba(11,10,9,.78) 30%,rgba(11,10,9,.55) 44%,rgba(11,10,9,0) 64%)")
     inner = f"""
 <div class="frame">
   <div style="position:absolute;inset:0;background:{shade}"></div>
-  <div style="position:absolute;left:84px;right:84px;{place};text-shadow:0 2px 24px rgba(0,0,0,.45)">
-    <div class="kicker" style="font-size:28px">{esc(scene.get('kicker'))}</div>
+  <div style="position:absolute;left:84px;right:84px;{place};text-shadow:0 2px 18px rgba(0,0,0,.75),0 0 4px rgba(0,0,0,.5)">
+    <div class="kicker" style="font-size:32px;font-weight:600;color:#E8A272">{esc(scene.get('kicker'))}</div>
     <div class="headline" style="font-size:{scene.get('size', 86)}px;margin-top:20px">{esc(scene.get('text'))}</div>
     <div class="body" style="font-size:38px;margin-top:20px">{esc(scene.get('sub'))}</div>
   </div>
