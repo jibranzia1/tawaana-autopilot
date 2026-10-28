@@ -170,6 +170,11 @@ def main():
     ig = os.environ.get("IG_USER_ID") or META.get("instagram_user_id")
     page = os.environ.get("FB_PAGE_ID") or META.get("facebook_page_id")
     failures = []
+    if token and page and not ig and META.get("post_to_instagram", True) and not a.dry_run:
+        # find the Instagram account linked to the Page
+        ig = (call("GET", f"{GRAPH}/{page}", token, fields="instagram_business_account")
+              .get("instagram_business_account") or {}).get("id")
+        say("instagram account linked to page:", ig or "none found")
 
     for p in due:
         say(f"{p['id']} ({p['type']}, {len(p['media'])} file(s))")
