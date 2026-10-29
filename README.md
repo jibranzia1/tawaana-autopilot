@@ -2,16 +2,18 @@
 
 Daily Instagram + Facebook posting for Tawaana, run from this repo.
 
-## How a week works
+## How it runs (fully automatic)
 
-1. **Saturday:** Claude plans next week (rules in [PLAYBOOK.md](PLAYBOOK.md)), generates the
-   images and Reel clips in Higgsfield, writes `briefs/<week>.json` on a `week/<week>` branch and opens a PR.
-2. **Automatically:** the *Build week* action renders every slide and Reel with the Tawaana fonts and
+1. **Every day ~10:40 AM PKT:** Claude checks how much content is queued. When 4 days or less are left,
+   it plans the next 7–13 days (rules in [PLAYBOOK.md](PLAYBOOK.md)), generates images and Reel clips in
+   Higgsfield, writes `briefs/<week>.json` on a `week/<week>` branch and opens a PR.
+2. **Automatically:** the *Build week* action renders every slide, Reel and story with the Tawaana fonts and
    colours, commits them to `docs/media/<week>/` and comments a full preview on the PR.
-3. **You:** open the PR on your phone, look through the preview, merge it. That's the approval.
-   Don't like a post? Set its `"status"` to `"skip"` in `queue/<week>.json` before merging, or ask Claude to redo it.
-4. **Every day at ~7:45 PM PKT:** the *Publish daily post* action posts that day's item to Instagram
-   and the Facebook Page and records it in `log/published.json`.
+3. **Claude checks and merges:** it reviews every rendered image and video, fixes anything off, and merges
+   the PR itself. The PR stays as a record. You get a notification with what was added.
+   To stop an item, set its `"status"` to `"skip"` in `queue/<week>.json` on main any time before it posts.
+4. **Every day:** the *Publish daily post* action posts a story at ~1 PM, the feed post at ~7:45 PM and
+   a story at ~8 PM PKT to Instagram and the Facebook Page, and records each in `log/published.json`.
 
 If a post fails, the action run turns red and GitHub emails you. Re-run it from the Actions tab;
 it only retries the platform that failed, so nothing is posted twice.
