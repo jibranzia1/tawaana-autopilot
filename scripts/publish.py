@@ -17,7 +17,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -31,6 +31,7 @@ GV = META.get("graph_version", "v24.0")
 GRAPH = f"https://graph.facebook.com/{GV}"
 GRAPH_VIDEO = f"https://graph-video.facebook.com/{GV}"
 LOG = ROOT / "log" / "published.json"
+SLOT_TIME = {"midday": "12:50", "evening": "20:05"}  # PKT; feed posts use their own "time"
 
 
 def say(*a):
@@ -41,7 +42,9 @@ class MetaError(RuntimeError):
     pass
 
 
-def call(method: str, url: str, token: str, **params):
+def call(method: str, endpoint: str, token: str, **params):
+    # Graph params like `url=` must not collide with these argument names.
+    url = endpoint
     params["access_token"] = token
     for attempt in range(4):
         r = requests.request(method, url, data=params if method == "POST" else None,
@@ -59,7 +62,9 @@ def call(method: str, url: str, token: str, **params):
             time.sleep(10 * (attempt + 1))
             continue
         safe = {k: v for k, v in err.items() if k in ("message", "type", "code", "error_subcode", "error_user_msg")}
-        raise MetaError(f"{method} {url.split('?')[0].replace(GRAPH, '')}: {safe}")
+        e = MetaError(f"{method} {url.split('?')[0].replace(GRAPH, '')}: {safe}")
+        e.subcode = err.get("error_subcode")
+        raise e
     raise MetaError("unreachable")
 
 
@@ -88,6 +93,39 @@ def ig_wait(container: str, token: str, limit_s: int = 600):
     raise MetaError("IG container processing timed out")
 
 
+def _ig_recent(ig: str, token: str, edge: str, since: datetime) -> str | None:
+    """Id of an item on the IG account published at/after `since`, if any."""
+    try:
+        items = call("GET", f"{GRAPH}/{ig}/{edge}", token, fields="id,timestamp", limit=5).get("data", [])
+    except MetaError:
+        return None
+    for it in items:
+        ts = it.get("timestamp")
+        if ts and datetime.strptime(ts, "%Y-%m-%dT%H:%M:%S%z") >= since:
+            return it["id"]
+    return None
+
+
+def ig_finish(container: str, token: str, ig: str, edge: str) -> str:
+    """media_publish with retries. Meta often answers 'media not found' (2207006) or
+    'not ready' (2207027) for a container that just finished; wait and retry, but first
+    check the item did not go live anyway, so nothing is posted twice."""
+    started = datetime.now(ZoneInfo("UTC")).replace(microsecond=0) - timedelta(seconds=30)
+    time.sleep(5)
+    for attempt in range(5):
+        try:
+            return call("POST", f"{GRAPH}/{ig}/media_publish", token, creation_id=container)["id"]
+        except MetaError as e:
+            if getattr(e, "subcode", None) not in (2207006, 2207027, 2207032) or attempt == 4:
+                raise
+            say(f"  instagram: not ready yet ({e.subcode}), retry {attempt + 1}")
+            time.sleep(15 * (attempt + 1))
+            live = _ig_recent(ig, token, edge, started)
+            if live:
+                return live
+    raise MetaError("unreachable")
+
+
 def ig_publish(post: dict, token: str, ig: str) -> dict:
     cap = post["caption"]
     if post["type"] == "image":
@@ -109,7 +147,7 @@ def ig_publish(post: dict, token: str, ig: str) -> dict:
     else:
         raise MetaError(f"unknown type {post['type']}")
     ig_wait(c, token)
-    mid = call("POST", f"{GRAPH}/{ig}/media_publish", token, creation_id=c)["id"]
+    mid = ig_finish(c, token, ig, "media")
     link = call("GET", f"{GRAPH}/{mid}", token, fields="permalink").get("permalink")
     return {"id": mid, "permalink": link}
 
@@ -140,8 +178,7 @@ def ig_story(story: dict, token: str, ig: str) -> dict:
     key = "video_url" if story["type"] == "video" else "image_url"
     c = call("POST", f"{GRAPH}/{ig}/media", token, media_type="STORIES", **{key: url})["id"]
     ig_wait(c, token)
-    mid = call("POST", f"{GRAPH}/{ig}/media_publish", token, creation_id=c)["id"]
-    return {"id": mid}
+    return {"id": ig_finish(c, token, ig, "stories")}
 
 
 def fb_story(story: dict, token: str, page: str) -> dict:
@@ -175,6 +212,8 @@ def main():
     ap.add_argument("--post-id", help="force one post or story id")
     ap.add_argument("--stories", choices=["midday", "evening"], help="publish that story slot instead of the feed post")
     ap.add_argument("--date", help="YYYY-MM-DD (default: today in PKT)")
+    ap.add_argument("--auto", action="store_true",
+                    help="post everything due today (time passed) that is not posted yet; safe to run often")
     a = ap.parse_args()
 
     kind = "stories" if a.stories else "posts"
@@ -182,13 +221,32 @@ def main():
     today = a.date or now.strftime("%Y-%m-%d")
     log = json.loads(LOG.read_text()) if LOG.exists() else {}
     items = load_queue(kind)
-    if a.post_id:
+    if a.post_id or a.auto:
         items = load_queue("posts") + load_queue("stories")
 
-    def ok(p):
-        return p.get("status", "approved") == "approved" and (kind == "posts" or p.get("slot") == a.stories)
+    platforms = [n for n, on in (("instagram", META.get("post_to_instagram", True)),
+                                 ("facebook", META.get("post_to_facebook", True))) if on]
 
-    if a.post_id:
+    def slot_time(p):
+        if "slot" in p:
+            return SLOT_TIME.get(p["slot"], "20:05")
+        return p.get("time") or "19:45"
+
+    def ok(p):
+        return p.get("status", "approved") == "approved" and (
+            a.auto or kind == "posts" or p.get("slot") == a.stories)
+
+    if a.auto and not a.post_id:
+        hhmm = now.strftime("%H:%M")
+        todays = sorted((p for p in items if p["date"] == today and ok(p)), key=slot_time)
+        due = [p for p in todays if (a.dry_run or slot_time(p) <= hhmm)
+               and not all(log.get(p["id"], {}).get(n) for n in platforms)]
+        if not due:
+            say(f"auto: nothing due right now ({hhmm}); today:",
+                ", ".join(f"{p['id']}@{slot_time(p)}" + (" done" if all(log.get(p['id'], {}).get(n) for n in platforms) else "")
+                          for p in todays) or "none")
+            return
+    elif a.post_id:
         due = [p for p in items if p["id"] == a.post_id]
         if not due:
             sys.exit(f"{a.post_id} not found in queue/")
