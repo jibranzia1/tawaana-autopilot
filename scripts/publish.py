@@ -275,6 +275,17 @@ def main():
         linked = info.get("instagram_business_account") or {}
         say("token OK for page:", info.get("name"), "| instagram linked:", linked.get("username") or "none found")
         ig = ig or linked.get("id")
+    page_token = token
+    if token and page:
+        # Facebook needs a *Page* token to post as the Page. If the secret is a user token,
+        # swap it for the Page token (never printed). If it already is one, keep it.
+        try:
+            pt = call("GET", f"{GRAPH}/{page}", token, fields="access_token").get("access_token")
+            if pt:
+                page_token = pt
+                say("facebook: posting with the Page token")
+        except MetaError as e:
+            say("facebook: could not get a Page token, using the secret as is:", e)
 
     for p in due:
         is_story = "slot" in p
@@ -292,8 +303,8 @@ def main():
             targets.append(("instagram", (lambda p=p: ig_story(p, token, ig)) if is_story
                             else (lambda p=p: ig_publish(p, token, ig)), ig))
         if META.get("post_to_facebook", True):
-            targets.append(("facebook", (lambda p=p: fb_story(p, token, page)) if is_story
-                            else (lambda p=p: fb_publish(p, token, page)), page))
+            targets.append(("facebook", (lambda p=p: fb_story(p, page_token, page)) if is_story
+                            else (lambda p=p: fb_publish(p, page_token, page)), page))
         for name, fn, account in targets:
             if rec.get(name):
                 say(f"  {name}: already posted, skipping")
