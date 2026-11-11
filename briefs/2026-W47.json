@@ -12,15 +12,18 @@
     {
      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261111_054817_78e3cf5c-98e6-4ff4-be1d-4fb7f8e452dc.mp4",
      "kicker": "Winter special",
-     "text": "Gur wali roti,\n*tawa pe.*"
+     "text": "Gur wali roti,\n*tawa pe.*",
+     "position": "upper"
     },
     {
      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261111_054816_508f1522-0e6f-4b73-b89d-7d74633d371c.mp4",
-     "text": "A few drops of ghee.\n*One flip.*"
+     "text": "A few drops of ghee.\n*One flip.*",
+     "position": "upper"
     },
     {
      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261111_054817_d539a89c-0925-4005-a77b-f3f77d2d20ff.mp4",
-     "text": "Chai ke saath,\n*garam garam.*"
+     "text": "Chai ke saath,\n*garam garam.*",
+     "position": "upper"
     }
    ],
    "end_card": {
@@ -142,11 +145,13 @@
     {
      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261111_054817_e2e8ece1-5a66-4c58-a3f3-5dfef8ad696d.mp4",
      "kicker": "Fish fry season",
-     "text": "Masala on.\nPan *ready.*"
+     "text": "Masala on.\nPan *ready.*",
+     "position": "upper"
     },
     {
      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261111_055343_7fa77ae7-df5d-4792-9a62-400a5c5734bf.mp4",
-     "text": "Lift it.\n*Crust stays on.*"
+     "text": "Lift it.\n*Crust stays on.*",
+     "position": "upper"
     },
     {
      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261111_054817_2c670ec1-8cec-492b-8af0-ac1bde64f5b0.mp4",
@@ -266,11 +271,13 @@
     {
      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261111_054906_1cf69e32-ccbb-44bb-90a4-8235fbfd31c0.mp4",
      "kicker": "Sunday tikka night",
-     "text": "Boti down.\n*Sizzle on.*"
+     "text": "Boti down.\n*Sizzle on.*",
+     "position": "upper"
     },
     {
      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261111_054906_584df350-be34-4b3c-bd9d-10c74db2eed2.mp4",
-     "text": "Turn it.\n*Nothing sticks.*"
+     "text": "Turn it.\n*Nothing sticks.*",
+     "position": "upper"
     },
     {
      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261111_054906_df4f9a05-7324-4d70-8ddc-5b800e9e75ac.mp4",
