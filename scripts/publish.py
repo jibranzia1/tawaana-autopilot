@@ -48,7 +48,7 @@ def call(method: str, endpoint: str, token: str, **params):
     params["access_token"] = token
     for attempt in range(4):
         r = requests.request(method, url, data=params if method == "POST" else None,
-                             params=params if method == "GET" else None, timeout=120)
+                             params=params if method in ("GET", "DELETE") else None, timeout=120)
         try:
             body = r.json()
         except ValueError:
