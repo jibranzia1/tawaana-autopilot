@@ -5,7 +5,12 @@ The rules every weekly batch follows. The weekly generator reads this file first
 ## Brand facts (only claim what is here)
 
 - Product: super lightweight iron body with PFOA-free granite non-stick coating, wooden handle with hanging loop.
-- Range: Tawa (12", 13", 14"), Fry Pan (20–30cm), Hot Plate (12", 13", 14"), Karahi with glass lid.
+- Range: Tawa (12", 13", 14"), Fry Pan (20–30cm), Hot Plate (12", 13", 14"). Sets: Starter Set (tawa + fry pan) and Complete (Jahez) Set (tawa + fry pan + hot plate).
+- **Tawaana does NOT sell a karahi, wok, handi, pot or any glass lid.** Never show, name or imply one, not even in the background or as a gift. Only these three pieces exist:
+  - Tawa: flat, almost no rim.
+  - Fry pan: deep with sloped sides.
+  - Hot plate: wide and shallow with a low straight rim, flatter than the fry pan.
+- What every piece looks like: black granite coating with white speckles, a riveted wooden handle on a short steel neck, two steel rivets, a steel hanging ring at the end of the handle. No lids, no plastic or red handles, no steel bodies.
 - No seasoning needed. Won't rust. Won't warp on high flame. Even, steady heat.
 - Works on gas and electric stoves. Dishwasher safe, hand wash recommended.
 - 1-year replacement warranty: peeling, cracks, warping, manufacturing defects.
@@ -29,7 +34,7 @@ Short sentences. One idea per slide. No emoji walls (max 2 per caption). No excl
 | Mon | Reel | Hero cooking moment (tawa) |
 | Tue | Carousel | Why Tawaana / comparisons / myth-busting |
 | Wed | Static | Single feature close-up |
-| Thu | Reel | Second product in action (fry pan / hot plate / karahi) |
+| Thu | Reel | Second product in action (fry pan / hot plate) |
 | Fri | Carousel | Care, tips, recipes |
 | Sat | Static | Lifestyle / ease of use / gifting (no offers) |
 | Sun | Reel | Family meal / weekend cooking |
@@ -47,7 +52,10 @@ Rotate products across weeks so each gets at least one hero moment a fortnight.
 ## Visual rules
 
 - Generate with Higgsfield, always passing the real product photo as a reference so the cookware matches the store:
-  tawa `tw2-product-tawa.png`, fry pan `tw2-product-frypan.png`, karahi `tw2-product-karahi.png`, hot plate `tw2-product-hotplate.png` (tawaana.com/cdn/shop/files/).
+  tawa `tw2-product-tawa.png`, fry pan `tw2-product-frypan.png`, hot plate `tw2-product-hotplate.png` (tawaana.com/cdn/shop/files/).
+- One product per shot, matching the dish: roti/paratha/cheela on the tawa, eggs/kebab/frying in the fry pan, tikka/grills/shallow cooking on the hot plate. Name the shape in the prompt ("flat tawa", "deep fry pan with sloped sides", "wide shallow hot plate with a low straight rim").
+- The product must be clearly visible and at least as prominent as the food (Jibran's rule: product over food).
+- QA rejects any render with a lid, karahi/wok/pot shape, wrong handle, or a hot plate that looks like a fry pan. Regenerate it.
 - Images: `nano_banana_2_1`, 2k. Feed 4:5, Reel frames 9:16. Prompts say "no text, no logos" — all text is added by the renderer.
 - Reel clips: `kling3_0`, pro, 5s, 9:16, sound on (natural sizzle/steam, "no music, no speech"). 3 clips per Reel + end card.
 - Hands are fine; avoid faces (AI faces read fake).
