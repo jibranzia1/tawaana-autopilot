@@ -1,0 +1,442 @@
+{
+  "week": "2026-W48",
+  "default_time": "19:30",
+  "posts": [
+    {
+      "id": "2026-11-23-lachha-paratha-reel",
+      "date": "2026-11-23",
+      "type": "reel",
+      "pillar": "hero",
+      "title": "Lachha paratha, layer by layer",
+      "scenes": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055209_565d315d-fd5e-440e-92be-ccce50e5d0aa.mp4",
+          "text": "Lachha paratha,\n*tawa pe.*",
+          "position": "upper"
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055658_b58a5734-4b52-4adf-af79-8677cd8d6b3b.mp4",
+          "text": "A little ghee.\n*Every layer crisp.*",
+          "position": "upper"
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055209_15616f7f-92d1-488f-a9bc-9b4e824fe596.mp4",
+          "text": "Lifts right off,\n*never stuck.*",
+          "position": "upper"
+        }
+      ],
+      "end_card": {
+        "headline": "Iron, *made light.*",
+        "sub": "Non-stick tawa, 12\" to 14\"."
+      },
+      "cover": {
+        "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054500_8329932f-3b10-499d-a0ba-e28ade8db690.png",
+        "kicker": "Monday nashta",
+        "headline": "Lachha paratha,\n*layer by layer.*"
+      },
+      "caption": "Monday ki subah, lachha paratha.\n\nAll those flaky layers need even heat and a surface that lets go. The Tawaana tawa gives you both.\n\nA little ghee, medium flame, and it lifts right off with a wooden spatula.\n\nSuper lightweight iron with a PFOA-free granite non-stick coating. tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#LachhaParatha",
+        "#NonStickTawa",
+        "#DesiBreakfast",
+        "#PakistaniFood",
+        "#DesiKitchen",
+        "#CookingReels"
+      ]
+    },
+    {
+      "id": "2026-11-24-purana-tawa-vs-tawaana",
+      "date": "2026-11-24",
+      "type": "carousel",
+      "pillar": "comparison",
+      "title": "Purana tawa vs Tawaana",
+      "slides": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054623_498ff8ee-c003-449e-bb19-2880f3d5ffd1.png",
+          "layout": "cover",
+          "kicker": "Side by side",
+          "headline": "Purana tawa\nvs *Tawaana.*",
+          "body": "Same roti. Less effort. Swipe."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054622_414fe553-c981-4bee-ac00-cfa37b8512c8.png",
+          "layout": "table",
+          "kicker": "The difference",
+          "headline": "What changes in\nyour *kitchen.*",
+          "table": {
+            "cols": [
+              "",
+              "Tawaana",
+              "Plain iron tawa"
+            ],
+            "rows": [
+              [
+                "Ready on day one",
+                "yes",
+                "no"
+              ],
+              [
+                "Won't rust",
+                "yes",
+                "no"
+              ],
+              [
+                "Non-stick coating",
+                "yes",
+                "no"
+              ],
+              [
+                "A few drops of oil",
+                "yes",
+                "no"
+              ],
+              [
+                "Gas and electric",
+                "yes",
+                "yes"
+              ]
+            ]
+          }
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054622_414fe553-c981-4bee-ac00-cfa37b8512c8.png",
+          "layout": "closing",
+          "headline": "Iron,\n*made light.*",
+          "body": "No seasoning. No rust. Just roti."
+        }
+      ],
+      "caption": "Your purana tawa did its job. Here's what changes with a Tawaana.\n\nNo seasoning before first use, so it's ready on day one.\nIt won't rust.\nThe PFOA-free granite non-stick coating needs just a few drops of oil.\nWorks on gas and electric stoves.\n\nSuper lightweight iron, made for everyday roti. tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#NonStickTawa",
+        "#RotiTawa",
+        "#KitchenUpgrade",
+        "#DesiKitchen",
+        "#PFOAFree"
+      ]
+    },
+    {
+      "id": "2026-11-25-stays-flat",
+      "date": "2026-11-25",
+      "type": "image",
+      "pillar": "feature",
+      "title": "Built flat, stays flat",
+      "slides": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054623_40bfbafa-aecb-4fb8-9481-7576f1827084.png",
+          "layout": "cover",
+          "kicker": "Hot plate, up close",
+          "headline": "Built flat.\n*Stays flat.*",
+          "body": "Won't warp on high flame. Even, steady heat."
+        }
+      ],
+      "alt_text": "An empty Tawaana hot plate sitting level on a gas burner, a few drops of oil on its speckled granite surface.",
+      "caption": "A warped pan wobbles, and food cooks unevenly.\n\nThe Tawaana hot plate is built not to warp on high flame, so it sits level on the burner and gives even, steady heat across the whole surface.\n\nPerfect for tikka, boti and grills.\n\nAvailable in 12\", 13\" and 14\". tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#HotPlate",
+        "#NonStick",
+        "#EvenHeat",
+        "#DesiKitchen",
+        "#KitchenEssentials"
+      ]
+    },
+    {
+      "id": "2026-11-26-pakoray-reel",
+      "date": "2026-11-26",
+      "type": "reel",
+      "pillar": "product-in-action",
+      "title": "Sardi aur pakoray",
+      "scenes": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055926_d3e4036d-65d2-4079-8b48-1ce4695ea44f.mp4",
+          "text": "Golden pakoray,\n*fry pan mein.*",
+          "position": "upper",
+          "duration": 3.6
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055210_c9550cbe-d909-4371-acaa-307111bd2a18.mp4",
+          "text": "Lift them out.\n*Nothing sticks.*",
+          "position": "upper"
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055735_9c397c6e-1990-4cab-bf44-5b5ab94ce550.mp4",
+          "text": "Chai, chutney,\n*pakoray.*",
+          "position": "upper"
+        }
+      ],
+      "end_card": {
+        "headline": "Iron, *made light.*",
+        "sub": "Non-stick fry pan, 20 to 30cm."
+      },
+      "cover": {
+        "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054459_413bd89d-43a2-4f98-8bc8-98c0fbfc4d95.png",
+        "kicker": "Winter evenings",
+        "headline": "Sardi aur\n*pakoray.*"
+      },
+      "caption": "Thandi shaam, garam pakoray.\n\nThe deep Tawaana fry pan with sloped sides keeps the oil steady, so every pakora turns golden and crisp.\n\nTurn them with a wooden spatula and nothing sticks to the pan.\n\nSuper lightweight iron with a PFOA-free granite non-stick coating. tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#Pakoray",
+        "#WinterSnacks",
+        "#FryPan",
+        "#PakistaniFood",
+        "#DesiKitchen",
+        "#CookingReels"
+      ]
+    },
+    {
+      "id": "2026-11-27-leftover-roti-ideas",
+      "date": "2026-11-27",
+      "type": "carousel",
+      "pillar": "recipes",
+      "title": "3 ideas for leftover roti",
+      "slides": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055029_66e1fdc6-e564-4ff6-87b6-faa2a39dd843.png",
+          "layout": "cover",
+          "kicker": "Recipe ideas",
+          "headline": "Leftover roti?\n*3 ideas.*",
+          "body": "Kal ki roti, aaj ka mazaa. Swipe."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054910_c6c63c76-3439-42a5-bf79-b7ec96f5dcfb.png",
+          "layout": "text",
+          "number": "01",
+          "kicker": "Tawa",
+          "headline": "Anda roti *roll.*",
+          "body": "Egg, onion, hari mirch. Fold it on the tawa."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054911_7d2eec4b-30d1-4241-b581-a90af9e070d2.png",
+          "layout": "text",
+          "number": "02",
+          "kicker": "Fry pan",
+          "headline": "Masala roti *chips.*",
+          "body": "Cut, fry golden, sprinkle chaat masala."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054952_a21a7960-3e9d-42f1-8939-4d0fe923ab4a.png",
+          "layout": "text",
+          "number": "03",
+          "kicker": "Hot plate",
+          "headline": "Malai boti *wrap.*",
+          "body": "Boti off the hot plate, rolled in a warm roti."
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055029_66e1fdc6-e564-4ff6-87b6-faa2a39dd843.png",
+          "layout": "closing",
+          "headline": "Kuch bhi\n*zaya nahi.*",
+          "body": "Tawa, fry pan and hot plate."
+        }
+      ],
+      "caption": "Kal ki roti bachi hai? Don't throw it out.\n\n1. Anda roti roll on the tawa\n2. Masala roti chips in the fry pan\n3. Malai boti wrap from the hot plate\n\nA few drops of oil and a wooden spatula is all you need.\n\nSave this for tomorrow's lunch. tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#LeftoverRoti",
+        "#LunchIdeas",
+        "#DesiRecipes",
+        "#PakistaniFood",
+        "#DesiKitchen"
+      ]
+    },
+    {
+      "id": "2026-11-28-one-hand-easy",
+      "date": "2026-11-28",
+      "type": "image",
+      "pillar": "lifestyle",
+      "title": "One hand, easy lift",
+      "slides": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054751_61958e9b-ce1e-42a0-bddf-4da2f1e8d73c.png",
+          "layout": "cover",
+          "kicker": "Super lightweight iron",
+          "headline": "One hand.\n*Easy lift.*",
+          "body": "From stove to plate, without the struggle."
+        }
+      ],
+      "alt_text": "A hand lifting a Tawaana tawa with a golden paratha by its wooden handle.",
+      "caption": "Iron tawa, but light enough for one hand.\n\nEvery Tawaana piece has a super lightweight iron body, so lifting, flipping and serving is easy, every single day.\n\nWooden handle, steel hanging loop, PFOA-free granite non-stick coating.\n\nIron, made light. tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#LightweightCookware",
+        "#NonStickTawa",
+        "#EverydayCooking",
+        "#DesiKitchen",
+        "#HomeCooking"
+      ]
+    },
+    {
+      "id": "2026-11-29-seekh-kebab-reel",
+      "date": "2026-11-29",
+      "type": "reel",
+      "pillar": "family",
+      "title": "Sunday seekh kebab",
+      "scenes": [
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_060008_0b266d3a-9af4-491a-94f2-9b4d621b8d8a.mp4",
+          "text": "Seekh down.\n*Sizzle on.*",
+          "position": "upper"
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055210_58b591e2-8860-4dda-9121-cb4d998324cf.mp4",
+          "text": "Naan, chutney,\n*sab tayyar.*",
+          "position": "upper"
+        },
+        {
+          "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055330_cae56aeb-2d51-4503-9b89-229d526dc82b.mp4",
+          "text": "Sab ke liye,\n*ghar pe.*",
+          "position": "upper"
+        }
+      ],
+      "end_card": {
+        "headline": "Iron, *made light.*",
+        "sub": "Non-stick hot plate, 12\" to 14\"."
+      },
+      "cover": {
+        "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054928_f589ca5b-3bcf-4f01-bdb1-a3b1e50d3cff.png",
+        "kicker": "Sunday dinner",
+        "headline": "Seekh kebab,\n*ghar pe.*"
+      },
+      "caption": "Sunday ka khana, seekh kebab ghar pe.\n\nThe wide, shallow Tawaana hot plate gives every kebab room to brown evenly, and the low rim keeps the juices in.\n\nTurn them with a wooden spatula. Nothing sticks.\n\nSuper lightweight iron with a PFOA-free granite non-stick coating. tawaana.com",
+      "hashtags": [
+        "#Tawaana",
+        "#SeekhKebab",
+        "#SundayDinner",
+        "#HotPlate",
+        "#PakistaniFood",
+        "#DesiKitchen",
+        "#CookingReels"
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "id": "2026-11-23-story-midday",
+      "date": "2026-11-23",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055208_c06c518f-303f-4ca2-8aa6-3993ba3fdb32.png",
+      "position": "upper",
+      "kicker": "Kitchen tip",
+      "headline": "Preheat first,\n*then the paratha.*",
+      "body": "1 to 2 minutes on low-to-medium flame."
+    },
+    {
+      "id": "2026-11-23-story-evening",
+      "date": "2026-11-23",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-11-23-lachha-paratha-reel"
+    },
+    {
+      "id": "2026-11-24-story-midday",
+      "date": "2026-11-24",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055208_5dd0a8c5-31ce-4677-b1ba-57b4e6f44cbb.png",
+      "position": "upper",
+      "kicker": "Pick your size",
+      "headline": "Hot plate in 12\", 13\"\n*and 14\".*",
+      "body": "Wide, shallow, low rim. Made for tikka and grills."
+    },
+    {
+      "id": "2026-11-24-story-evening",
+      "date": "2026-11-24",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-11-24-purana-tawa-vs-tawaana"
+    },
+    {
+      "id": "2026-11-25-story-midday",
+      "date": "2026-11-25",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054949_5b822e77-6a2d-4c94-a866-76c10e5c871e.png",
+      "position": "upper",
+      "kicker": "Care tip",
+      "headline": "Wooden or\n*silicone only.*",
+      "body": "Keeps the granite coating smooth for years."
+    },
+    {
+      "id": "2026-11-25-story-evening",
+      "date": "2026-11-25",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-11-25-stays-flat"
+    },
+    {
+      "id": "2026-11-26-story-midday",
+      "date": "2026-11-26",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054458_bed6eae4-00f7-4b41-87f8-61a7c09f9878.png",
+      "position": "upper",
+      "kicker": "Winter evenings",
+      "headline": "Pakoray,\n*fry pan mein.*",
+      "body": "Golden and crisp, and nothing sticks."
+    },
+    {
+      "id": "2026-11-26-story-evening",
+      "date": "2026-11-26",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-11-26-pakoray-reel"
+    },
+    {
+      "id": "2026-11-27-story-midday",
+      "date": "2026-11-27",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054749_3b0a5ea9-a008-465e-b872-9c440342fb94.png",
+      "position": "upper",
+      "kicker": "Care tip",
+      "headline": "No steel wool,\n*ever.*",
+      "body": "A soft sponge is all it takes."
+    },
+    {
+      "id": "2026-11-27-story-evening",
+      "date": "2026-11-27",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-11-27-leftover-roti-ideas"
+    },
+    {
+      "id": "2026-11-28-story-midday",
+      "date": "2026-11-28",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_055538_719f6698-e78d-4c23-bb68-be778e4e688b.png",
+      "position": "upper",
+      "kicker": "Weekend nashta",
+      "headline": "Anda paratha,\n*on the tawa.*",
+      "body": "Paratha first, egg on top, one gentle flip."
+    },
+    {
+      "id": "2026-11-28-story-evening",
+      "date": "2026-11-28",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-11-28-one-hand-easy"
+    },
+    {
+      "id": "2026-11-29-story-midday",
+      "date": "2026-11-29",
+      "slot": "midday",
+      "layout": "tip",
+      "src": "https://d8j0ntlcm91z4.cloudfront.net/user_3Du5wwrdWjcyZSjZvAB6BzDNRDJ/hf_20261118_054622_9da507b2-4e09-4540-b16b-12b96a6e2dae.png",
+      "position": "upper",
+      "kicker": "Sunday dinner",
+      "headline": "Seekh night,\n*sab ghar pe.*",
+      "body": "Hot plate on, family at the table."
+    },
+    {
+      "id": "2026-11-29-story-evening",
+      "date": "2026-11-29",
+      "slot": "evening",
+      "layout": "post",
+      "from_post": "2026-11-29-seekh-kebab-reel"
+    }
+  ]
+}
